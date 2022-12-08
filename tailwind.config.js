@@ -29,6 +29,10 @@ module.exports = {
         },
       },
     },
+    fontFamily: {
+      sans: ["var(--font-neue)", ...fontFamily.sans],
+      mono: ["var(--font-lilex)", ...fontFamily.mono],
+    },
   },
   plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 };

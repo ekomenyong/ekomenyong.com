@@ -43,19 +43,22 @@ const lilex = localFont({
   variable: "--font-lilex",
 });
 
-export default function RootLayout({
-  children,
-}: {
+interface IRootLayout {
   children: React.ReactNode;
-}) {
+}
+
+export default function RootLayout({ children }: IRootLayout) {
   return (
-    <html lang="en" className={clsxm(neueMontreal.variable, lilex.variable)}>
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
+    <html
+      lang="en"
+      className={clsxm(
+        "text-dark bg-light",
+        neueMontreal.variable,
+        lilex.variable
+      )}
+    >
       <head />
-      <body>{children}</body>
+      <body className="min-h-screen">{children}</body>
     </html>
   );
 }

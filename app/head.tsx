@@ -38,6 +38,17 @@ export default function Head() {
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://ekomenyong.com" />
       <meta property="og:image" content="/og.jpg" />
+      <meta
+        name="twitter:title"
+        content="Ekom Enyong | Creating Digital Strategies & Web Experiences"
+      />
+      <meta name="twitter:card" content="summary_large_card" />
+      <meta name="twitter:site" content="@ekomenyong" />
+      <meta
+        name="description"
+        content="Ekom Enyong is a professional SEO and Content marketer, web designer, and web developer based in Charlotte."
+      />
+      <meta name="twitter:image" content="https://ekomenyong.com/og.jpg" />
     </>
   );
 }

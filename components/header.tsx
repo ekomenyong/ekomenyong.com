@@ -12,7 +12,7 @@ export default function Header() {
       fullSize
       className="border-b border-dark lg:border-none"
     >
-      <nav className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8" aria-label="Top">
+      <Container as="nav" aria-label="Top">
         <div className="flex w-full items-center justify-between py-6">
           <div className="flex items-center">
             <Logo />
@@ -34,7 +34,7 @@ export default function Header() {
             ))}
           </div>
         </div>
-      </nav>
+      </Container>
     </Container>
   );
 }

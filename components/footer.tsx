@@ -8,7 +8,10 @@ export default function Footer() {
   return (
     <Container fullSize as="footer">
       <hr className="mt-12 border-dark" />
-      <div className="mx-auto max-w-6xl py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
+      <Container
+        as="div"
+        className="flex flex-col py-12 sm:px-6 md:flex-row md:items-center md:justify-between"
+      >
         <div className="flex justify-center space-x-6 md:order-2">
           {nav.map((item, index) => (
             <KommyLink
@@ -25,7 +28,7 @@ export default function Footer() {
           <Logo textSize="text-base" />{" "}
           <p className="ml-2 font-semibold">&copy; 2022</p>
         </div>
-      </div>
+      </Container>
     </Container>
   );
 }

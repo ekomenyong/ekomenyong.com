@@ -8,7 +8,7 @@ export const navigation: TNavItems = {
     },
     {
       title: "Info",
-      href: "#",
+      href: "/info",
     },
   ],
   footerNav: [

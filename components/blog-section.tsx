@@ -70,7 +70,9 @@ const HomeBlog = () => {
         </h2>
       </div> */}
       {/* BLOG GRID */}
-      <span className="text-sm uppercase text-slate-500">scroll &rarr;</span>
+      <span className="font-mono text-sm font-semibold lowercase text-gray-500">
+        scroll &rarr;
+      </span>
       <div className="flex flex-row items-start justify-start space-x-8 overflow-x-auto pb-8">
         {posts.map((p, index) => (
           <BlogCard

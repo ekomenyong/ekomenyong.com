@@ -47,6 +47,7 @@ module.exports = {
     animationDuration: {
       1500: "1500ms",
       2000: "2000ms",
+      2500: "2500ms",
     },
     backgroundImage: {
       "hero-gradient": "url('/hero-gradient.png')",

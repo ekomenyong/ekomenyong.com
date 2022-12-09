@@ -5,7 +5,7 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    @apply h-full selection:bg-brand selection:text-dark;
+    @apply h-full selection:bg-brand-400 selection:text-dark;
   }
   .h0 {
     @apply text-4xl font-semibold md:text-6xl;

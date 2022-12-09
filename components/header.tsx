@@ -10,7 +10,7 @@ export default function Header() {
     <Container
       as="header"
       fullSize
-      className="border-b border-dark lg:border-none"
+      className="border-b border-dark animate-in slide-in-from-top duration-1000 lg:border-none"
     >
       <Container as="nav" aria-label="Top">
         <div className="flex w-full items-center justify-between py-6">
@@ -27,7 +27,7 @@ export default function Header() {
                 href={item.href}
                 dottedLine
                 animatedUnderline
-                className={clsxm("text-base font-semibold text-dark")}
+                className="text-base font-semibold tracking-wide text-dark"
               >
                 {item.title}
               </KommyLink>

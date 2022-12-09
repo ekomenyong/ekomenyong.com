@@ -33,6 +33,17 @@ module.exports = {
       sans: ["var(--font-neue)", ...fontFamily.sans],
       mono: ["var(--font-lilex)", ...fontFamily.mono],
     },
+    keyframes: {
+      jelly: {
+        "0%,100%": { transform: "scale(1, 1)" },
+        "25%": { transform: "scale(0.95, 1.05)" },
+        "50%": { transform: "scale(1.05, 0.95)" },
+        "75%": { transform: "scale(0.95, 1.05)" },
+      },
+    },
+    animation: {
+      jelly: "jelly 0.5s",
+    },
   },
   plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 };

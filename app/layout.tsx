@@ -1,6 +1,6 @@
 import "./globals.css";
+import { clsxm } from "@/utils";
 import localFont from "@next/font/local";
-import clsxm from "../utils";
 
 const neueMontreal = localFont({
   src: [

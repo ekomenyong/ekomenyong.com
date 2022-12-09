@@ -1,0 +1,14 @@
+import { TNavItems } from "types";
+
+export const navigation: TNavItems = {
+  mainNav: [
+    {
+      title: "Insights",
+      href: "#",
+    },
+    {
+      title: "Info",
+      href: "#",
+    },
+  ],
+};

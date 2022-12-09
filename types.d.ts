@@ -5,4 +5,5 @@ export interface INavItem {
 
 export type TNavItems = {
   mainNav: INavItem[];
+  footerNav: INavItem[];
 };

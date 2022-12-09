@@ -58,7 +58,9 @@ export default function RootLayout({ children }: IRootLayout) {
       )}
     >
       <head />
-      <body className="min-h-screen">{children}</body>
+      <body className="min-h-screen bg-hero-gradient bg-contain bg-top bg-no-repeat">
+        {children}
+      </body>
     </html>
   );
 }

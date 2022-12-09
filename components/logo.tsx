@@ -1,12 +1,20 @@
 import Image from "next/image";
 import KommyLink from "./a";
 import logoImage from "../public/logo.svg";
+import { clsxm } from "@/utils";
 
-export default function Logo() {
+interface ILogo {
+  textSize?: string;
+}
+
+export default function Logo({ textSize }: ILogo) {
   return (
     <KommyLink
       href="/"
-      className="flex flex-row flex-nowrap items-center justify-start text-xl font-semibold capitalize text-dark hover:animate-jelly"
+      className={clsxm(
+        "flex flex-row flex-nowrap items-center justify-start font-semibold capitalize text-dark hover:animate-jelly",
+        textSize ? textSize : "text-xl "
+      )}
     >
       <span className="sr-only">Ekom Enyong</span>
       <Image

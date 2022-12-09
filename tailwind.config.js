@@ -44,6 +44,13 @@ module.exports = {
     animation: {
       jelly: "jelly 0.5s",
     },
+    animationDuration: {
+      1500: "1500ms",
+      2000: "2000ms",
+    },
+    backgroundImage: {
+      "hero-gradient": "url('/hero-gradient.png')",
+    },
   },
   plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 };

@@ -1,3 +1,4 @@
+import Footer from "components/footer";
 import Header from "components/header";
 
 interface IWebLayout {
@@ -9,6 +10,7 @@ export default function WebLayout({ children }: IWebLayout) {
     <>
       <Header />
       <main className="flex-1">{children}</main>
+      <Footer />
     </>
   );
 }

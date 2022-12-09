@@ -1,12 +1,16 @@
+import { AboutSection, BlogSection } from "@/components";
+import Container from "components/container";
+
 export default function Home() {
   return (
-    <section>
-      <h1 className="text-6xl font-semibold">Welcome to the homepage.</h1>
-      <p className="text-base">
-        Tailwind CSS is working with Next.js 13 RSC and serving a local font
-        using{" "}
-        <span className="bg-light font-mono text-brand">`@next/font`</span>.
-      </p>
-    </section>
+    <Container as="section" className="py-12">
+      <div className="pt-40 pb-24">
+        <h1 className="text-4xl font-semibold md:text-7xl lg:text-8xl">
+          Crafting Custom Digital Strategies & Web Experiences
+        </h1>
+      </div>
+      <BlogSection />
+      <AboutSection />
+    </Container>
   );
 }

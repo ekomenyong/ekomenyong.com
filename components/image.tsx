@@ -1,8 +1,10 @@
+"use client";
+
 import { clsxm } from "@/utils";
 import Image, { ImageProps } from "next/image";
 import { useState } from "react";
 
-export type KommyImageProps = {
+export type TKommyImage = {
   useSkeleton?: boolean;
   blurClassName?: string;
 } & ImageProps;
@@ -16,7 +18,7 @@ export default function KommyImage({
   height,
   className,
   ...rest
-}: KommyImageProps) {
+}: TKommyImage) {
   const [status, setStatus] = useState(useSkeleton ? "loading" : "complete");
   return (
     <Image

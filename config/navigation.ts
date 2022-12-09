@@ -11,4 +11,10 @@ export const navigation: TNavItems = {
       href: "#",
     },
   ],
+  footerNav: [
+    { title: "Twitter", href: "#" },
+    { title: "LinkedIn", href: "#" },
+    { title: "Github", href: "#" },
+    { title: "Email", href: "#" },
+  ],
 };

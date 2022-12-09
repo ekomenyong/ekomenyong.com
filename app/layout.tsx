@@ -52,7 +52,7 @@ export default function RootLayout({ children }: IRootLayout) {
     <html
       lang="en"
       className={clsxm(
-        "text-dark bg-light",
+        "bg-light text-dark",
         neueMontreal.variable,
         lilex.variable
       )}

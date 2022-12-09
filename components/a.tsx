@@ -45,7 +45,7 @@ export default function KommyLink({
       href={href}
       className={clsxm(
         dottedLine && "border-b border-dotted border-dark hover:border-dark/0",
-        showIcon && "after:content-['_↗'] after:ml-2",
+        showIcon && "after:ml-2 after:content-['_↗']",
         animatedUnderline && "animated-underline",
         className
       )}

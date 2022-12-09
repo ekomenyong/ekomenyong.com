@@ -6,7 +6,7 @@ export default function Logo() {
   return (
     <KommyLink
       href="/"
-      className="text-xl font-semibold capitalize text-dark flex flex-row flex-nowrap items-center justify-start hover:animate-jelly"
+      className="flex flex-row flex-nowrap items-center justify-start text-xl font-semibold capitalize text-dark hover:animate-jelly"
     >
       <span className="sr-only">Ekom Enyong</span>
       <Image
@@ -14,7 +14,7 @@ export default function Logo() {
         width={48}
         height={48}
         alt="Pink circle"
-        className="w-4 h-4 mr-2"
+        className="mr-2 h-4 w-4"
       />
       Ekom Enyong
     </KommyLink>

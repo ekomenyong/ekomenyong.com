@@ -5,7 +5,7 @@ export default function Home() {
       <p className="text-base">
         Tailwind CSS is working with Next.js 13 RSC and serving a local font
         using{" "}
-        <span className="font-mono bg-light text-brand">`@next/font`</span>.
+        <span className="bg-light font-mono text-brand">`@next/font`</span>.
       </p>
     </section>
   );

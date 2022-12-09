@@ -7,10 +7,13 @@ const nav = navigation.mainNav;
 export default function Header() {
   return (
     <header className="border-b border-dark lg:border-none">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
-        <div className="w-full py-6 flex items-center justify-between">
+      <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Top">
+        <div className="flex w-full items-center justify-between py-6">
           <div className="flex items-center">
             <Logo />
+          </div>
+          <div className="hidden font-semibold capitalize lg:inline-flex">
+            <p>Creating digital strategies & Web experiences</p>
           </div>
           <div className="ml-10 space-x-8">
             {nav.map((item, index) => (
@@ -19,7 +22,7 @@ export default function Header() {
                 href={item.href}
                 dottedLine
                 animatedUnderline
-                className={clsxm("text-base font-medium text-dark")}
+                className={clsxm("text-base font-semibold text-dark")}
               >
                 {item.title}
               </KommyLink>

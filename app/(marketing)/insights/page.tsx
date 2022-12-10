@@ -1,16 +1,16 @@
 "use client";
 import { useState } from "react";
-import { BlogSection, Container } from "@/components";
+import { BlogSection, Container, H1Heading } from "@/components";
 
 export default function BlogIndexPage({}) {
   const [searchValue, setSearchValue] = useState("");
   return (
     <Container className="py-24">
       <div className="flex max-w-4xl flex-col items-start justify-center animate-in slide-in-from-left duration-1500">
-        <h1 className="mb-4 text-4xl font-semibold  md:mb-6 md:text-7xl lg:text-8xl">
+        <H1Heading className="mb-4 md:mb-6">
           From the desk of Ekom Enyong...
-        </h1>
-        <p className="max-w-2xl text-2xl leading-8 ">
+        </H1Heading>
+        <p className="max-w-2xl text-2xl leading-8">
           Sometimes I write about things. When I do write about things, I write
           about SEO, digital marketing, web design, user experience,
           development, and stuff.

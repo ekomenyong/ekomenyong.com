@@ -1,11 +1,11 @@
-import { Container, KommyLink } from "@/components";
+import { Container, H1Heading, KommyLink } from "@/components";
 
 export default function AboutPage() {
   return (
     <Container as="section" className="py-24">
-      <h1 className="mb-4 text-4xl font-semibold animate-in slide-in-from-left duration-1500 md:mb-6 md:text-7xl lg:text-8xl">
+      <H1Heading className="mb-4 animate-in slide-in-from-left duration-1500">
         Hey, I'm Ekom.
-      </h1>
+      </H1Heading>
       <h2 className="h0 font-semibold animate-in slide-in-from-right duration-1500">
         Nice to meet you 🤝🏾
       </h2>

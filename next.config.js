@@ -1,4 +1,7 @@
 /** @type {import('next').NextConfig} */
+
+const withPlugins = require("next-compose-plugins");
+const { withContentlayer } = require("next-contentlayer");
 const nextConfig = {
   experimental: {
     appDir: true,
@@ -10,4 +13,4 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+module.exports = withPlugins([withContentlayer], nextConfig);

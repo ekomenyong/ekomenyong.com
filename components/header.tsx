@@ -1,5 +1,4 @@
 import { navigation } from "@/config/navigation";
-import { clsxm } from "@/utils";
 import KommyLink from "./a";
 import Container from "./container";
 import Logo from "./logo";
@@ -25,7 +24,6 @@ export default function Header() {
               <KommyLink
                 key={index}
                 href={item.href}
-                dottedLine
                 animatedUnderline
                 className="text-base font-semibold tracking-wide text-dark"
               >

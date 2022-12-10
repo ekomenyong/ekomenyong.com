@@ -3,12 +3,12 @@ import Container from "./container";
 export default function AboutSection() {
   return (
     <Container as="section">
-      <h2 className="mt-10 mb-6 max-w-5xl leading-8 lg:leading-10">
-        I'm an SEO & Content Manager and have spent the last 10 years helping
-        brands increase inbound leads through digital strategy and high-quality
+      <h2 className="mt-20 mb-6 max-w-5xl leading-8 lg:leading-10">
+        An SEO Manager who has spent the last 10 years helping brands increase
+        leads and organic traffic through digital strategy and high-quality
         content.
       </h2>
-      <div className="flex flex-col items-start justify-center space-y-6 text-xl lg:flex-row lg:flex-nowrap lg:justify-between lg:space-x-16 lg:space-y-0">
+      <div className="flex flex-col items-start justify-center space-y-6 text-xl text-dark lg:flex-row lg:flex-nowrap lg:justify-between lg:space-x-16 lg:space-y-0">
         <div className="max-w-lg">
           <p>
             I'm a results-focused digital marketer and a self-taught web

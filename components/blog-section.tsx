@@ -1,3 +1,4 @@
+import KommyLink from "./a";
 import BlogCard from "./blog-card";
 import Container from "./container";
 

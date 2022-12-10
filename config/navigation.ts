@@ -4,7 +4,7 @@ export const navigation: TNavItems = {
   mainNav: [
     {
       title: "Insights",
-      href: "#",
+      href: "/insights",
     },
     {
       title: "Info",

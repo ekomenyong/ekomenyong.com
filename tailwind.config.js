@@ -53,5 +53,9 @@ module.exports = {
       "hero-gradient": "url('/hero-gradient.png')",
     },
   },
-  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
+  plugins: [
+    require("tailwindcss-animate"),
+    require("@tailwindcss/forms"),
+    require("@tailwindcss/typography"),
+  ],
 };

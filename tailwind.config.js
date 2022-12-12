@@ -12,7 +12,7 @@ module.exports = {
     extend: {
       colors: {
         ...colors,
-        light: "#f2f2f2",
+        light: "#f7f7f7",
         dark: "#272727",
         brand: {
           50: "#fff6fa",

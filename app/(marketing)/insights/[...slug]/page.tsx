@@ -1,3 +1,5 @@
+import { notFound } from "next/navigation";
+import { allAuthors, allPosts } from "contentlayer/generated";
 import {
   TableOfContents,
   Container,
@@ -5,136 +7,75 @@ import {
   KommyLink,
   Callout,
   BlogFooter,
-  Icons,
+  MDXComponents,
+  KommyImage,
 } from "@/components";
-import { clsxm } from "@/utils";
+import "./mdx.css";
+import { formatDate } from "@/utils";
 
-export default function SingleBlogPost({}) {
+interface ISingleBlogPost {
+  params: {
+    slug: string[];
+  };
+}
+
+export async function generateStaticParams(): Promise<
+  ISingleBlogPost["params"][]
+> {
+  return allPosts.map((post) => ({
+    slug: post.slugAsParams.split("/"),
+  }));
+}
+
+export default function SingleBlogPost({ params }: ISingleBlogPost) {
+  const slug = params?.slug?.join("/");
+  const post = allPosts.find((post) => post.slugAsParams === slug);
+
+  if (!post) {
+    notFound();
+  }
+  const authors = post.authors.map((author) =>
+    allAuthors.find(({ slug }) => slug === `authors/${author}`)
+  );
   return (
     <>
-      <BlogHeader />
+      <BlogHeader
+        authorName="Ekom Enyong"
+        coverImageAttributionLink={post.cover_image_attribution_link}
+        coverImageAttributionText={post.cover_image_attribution_text}
+        date={formatDate(post.date)}
+        title={post.title}
+        imgSrc={post.cover_image}
+        imgAlt={post.cover_image}
+        readingTime={post.readingTime.text}
+      />
       <Container className="flex flex-col items-center justify-start lg:flex-row lg:items-start lg:justify-between">
-        <TableOfContents />
-        <article className="prose prose-xl max-w-3xl py-8 text-dark prose-a:no-underline prose-li:marker:text-dark">
-          <Callout>
-            Pastrami turducken shoulder short loin strip steak.{" "}
-            <KommyLink href="#" dottedLine animatedUnderline>
-              Hamburger ribeye
-            </KommyLink>{" "}
-            pork loin. Pastrami turducken shoulder short loin strip steak.
-            Hamburger ribeye pork loin.
-          </Callout>
-          <h2>This is the first subheading for this post</h2>
-          <p>
-            Pastrami turducken shoulder short loin strip steak. Hamburger ribeye
-            pork loin pork belly pancetta short ribs chicken biltong meatloaf
-            beef ribs tri-tip sirloin. Frankfurter biltong short ribs boudin,
-            jowl buffalo meatball.
-          </p>
-          <blockquote
-            className={clsxm(
-              "mt-6 border-l-4 border-brand pl-6 italic text-dark [&>*]:text-zinc-600"
-            )}
-          >
-            <p>Pastrami turducken shoulder short loin strip steak.</p>
-            <cite>– This is a citation</cite>
-          </blockquote>
-          <p>
-            Bacon ipsum dolor amet tail swine cow shank ham hock. Turkey kevin
-            strip steak, corned beef salami shankle ground round sausage pork
-            chop. Tongue jerky salami filet mignon shoulder swine, short loin
-            ball tip.
-          </p>
-          <h3>This is the first subheading for this post</h3>
-          <p>
-            Pastrami turducken shoulder short loin strip steak. Hamburger ribeye
-            pork loin{" "}
-            <KommyLink
-              dottedLine
-              animatedUnderline
-              className="no-underline"
-              href="#"
-            >
-              pork belly pancetta short ribs
-            </KommyLink>{" "}
-            chicken biltong meatloaf beef ribs tri-tip sirloin. Frankfurter
-            biltong short ribs boudin, jowl buffalo meatball.
-          </p>
-          <ol>
-            <li>List 1</li>
-            <li>List 2</li>
-            <li>List 3</li>
-          </ol>
-          <p>
-            Bacon ipsum dolor amet tail swine cow shank ham hock. Turkey kevin
-            strip steak, corned beef salami shankle ground round sausage pork
-            chop. Tongue jerky salami filet mignon shoulder swine, short loin
-            ball tip.
-          </p>
-          <h2>This is the first subheading for this post</h2>
-          <p>
-            Pastrami turducken shoulder short loin strip steak. Hamburger ribeye
-            pork loin pork belly pancetta short ribs chicken biltong meatloaf
-            beef ribs tri-tip sirloin. Frankfurter biltong short ribs boudin,
-            jowl buffalo meatball.
-          </p>
-          <ul>
-            <li>List 1</li>
-            <li>List 2</li>
-            <li>List 3</li>
-          </ul>
-          <p>
-            Bacon ipsum dolor amet tail swine cow shank ham hock. Turkey kevin
-            strip steak, corned beef salami shankle ground round sausage pork
-            chop. Tongue jerky salami filet mignon shoulder swine, short loin
-            ball tip.
-          </p>
-          <h3>This is the first subheading for this post</h3>
-          <p>
-            Pastrami turducken shoulder short loin strip steak. Hamburger ribeye
-            pork loin{" "}
-            <KommyLink
-              dottedLine
-              animatedUnderline
-              className="no-underline"
-              href="#"
-            >
-              pork belly pancetta short ribs
-            </KommyLink>{" "}
-            chicken biltong meatloaf beef ribs tri-tip sirloin. Frankfurter
-            biltong short ribs boudin, jowl buffalo meatball.
-          </p>
-          <ol>
-            <li>List 1</li>
-            <li>List 2</li>
-            <li>List 3</li>
-          </ol>
-          <p>
-            Bacon ipsum dolor amet tail swine cow shank ham hock. Turkey kevin
-            strip steak, corned beef salami shankle ground round sausage pork
-            chop. Tongue jerky salami filet mignon shoulder swine, short loin
-            ball tip.
-          </p>
-          <h2>This is the first subheading for this post</h2>
-          <p>
-            Pastrami turducken shoulder short loin strip steak. Hamburger ribeye
-            pork loin pork belly pancetta short ribs chicken biltong meatloaf
-            beef ribs tri-tip sirloin. Frankfurter biltong short ribs boudin,
-            jowl buffalo meatball.
-          </p>
-          <ul>
-            <li>List 1</li>
-            <li>List 2</li>
-            <li>List 3</li>
-          </ul>
-          <p>
-            Bacon ipsum dolor amet tail swine cow shank ham hock. Turkey kevin
-            strip steak, corned beef salami shankle ground round sausage pork
-            chop. Tongue jerky salami filet mignon shoulder swine, short loin
-            ball tip.
-          </p>
+        <TableOfContents source={post.body.raw} />
+        <article className="max-w-full px-4 pb-8 text-dark lg:max-w-3xl">
+          <MDXComponents code={post.body.code} />
           <hr className="mt-24 mb-10 w-1/3 border border-gray-700" />
-          <BlogFooter />
+          {authors?.length ? (
+            <footer className="space-y-8">
+              {authors.map((author) => (
+                <div className="flex flex-row items-center justify-start">
+                  <KommyImage
+                    useSkeleton
+                    src={`${author?.avatar}`}
+                    width={48}
+                    height={48}
+                    alt={`Avatar of ${author?.name}`}
+                    className="my-0 mr-4 hidden h-10 w-10 rounded-full object-cover object-center lg:inline-block"
+                  />
+                  <p className="m-0 text-lg text-zinc-600">
+                    <span className="font-semibold text-dark">
+                      {author?.name}
+                    </span>{" "}
+                    {author?.description}
+                  </p>
+                </div>
+              ))}
+            </footer>
+          ) : null}
         </article>
       </Container>
     </>

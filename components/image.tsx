@@ -23,6 +23,7 @@ export default function KommyImage({
   return (
     <Image
       className={clsxm(
+        "object-cover object-center",
         className,
         status === "loading" && clsxm("animate-pulse", blurClassName)
       )}

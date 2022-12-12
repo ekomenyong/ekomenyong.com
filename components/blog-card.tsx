@@ -32,6 +32,7 @@ const BlogCard = ({ href, src, alt, title, tags, readingTime }: TBlogCard) => {
             width={400}
             height={220}
             className="group-hover:blog-scale h-full w-[320px] object-cover object-center"
+            priority={true}
           />
         </div>
 

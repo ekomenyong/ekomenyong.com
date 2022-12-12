@@ -1,15 +1,13 @@
-import {
-  ComputedFields,
-  defineDocumentType,
-  makeSource,
-} from "contentlayer/source-files";
+import { defineDocumentType, makeSource } from "contentlayer/source-files";
 import remarkGfm from "remark-gfm";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import readingTime from "reading-time";
+import { readFileSync } from "fs";
 
-const computedFields: ComputedFields = {
+/** @type {import('contentlayer/source-files').ComputedFields} */
+const computedFields = {
   readingTime: { type: "json", resolve: (doc) => readingTime(doc.body.raw) },
   slug: {
     type: "string",
@@ -38,6 +36,7 @@ export const Post = defineDocumentType(() => ({
     },
     description: {
       type: "string",
+      required: true,
     },
     date: {
       type: "date",
@@ -48,6 +47,14 @@ export const Post = defineDocumentType(() => ({
       default: true,
     },
     cover_image: {
+      type: "string",
+      required: true,
+    },
+    cover_image_attribution_text: {
+      type: "string",
+      required: true,
+    },
+    cover_image_attribution_link: {
       type: "string",
       required: true,
     },
@@ -102,18 +109,19 @@ export default makeSource({
       [
         rehypePrettyCode,
         {
-          theme: "moonlight-ii",
-          onVisitLine(node: any) {
+          // theme: "github-dark",
+          theme: JSON.parse(readFileSync("./assets/themes/moonlight-ii.json")),
+          onVisitLine(node) {
             // Prevent lines from collapsing in `display: grid` mode, and allow empty
             // lines to be copy/pasted
             if (node.children.length === 0) {
               node.children = [{ type: "text", value: " " }];
             }
           },
-          onVisitHighlightedLine(node: any) {
+          onVisitHighlightedLine(node) {
             node.properties.className.push("line--highlighted");
           },
-          onVisitHighlightedWord(node: any) {
+          onVisitHighlightedWord(node) {
             node.properties.className = ["word--highlighted"];
           },
         },

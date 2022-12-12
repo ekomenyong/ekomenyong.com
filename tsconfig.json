@@ -19,6 +19,7 @@
       "@/components": ["components"],
       "@/config/*": ["config/*"],
       "@/fonts": ["config/fonts"],
+      "@/hooks/*": ["hooks/*"],
       "@/utils": ["utils"],
       "contentlayer/generated": ["./.contentlayer/generated"]
     },
@@ -33,7 +34,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    ".contentlayer/generated"
+    ".contentlayer/generated",
+    "contentlayer.config.js"
   ],
   "exclude": ["node_modules"]
 }

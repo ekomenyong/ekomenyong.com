@@ -3,6 +3,7 @@
 const withPlugins = require("next-compose-plugins");
 const { withContentlayer } = require("next-contentlayer");
 const nextConfig = {
+  reactStrictMode: true,
   experimental: {
     appDir: true,
   },
@@ -13,4 +14,4 @@ const nextConfig = {
   },
 };
 
-module.exports = withPlugins([withContentlayer], nextConfig);
+module.exports = withPlugins([[withContentlayer]], nextConfig);

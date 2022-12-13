@@ -17,17 +17,17 @@
 
   h2,
   .h2 {
-    @apply mt-6 text-4xl font-semibold md:text-4xl;
+    @apply mt-6 scroll-mt-20 text-4xl font-semibold md:text-4xl;
   }
 
   h3,
   .h3 {
-    @apply mt-6 text-2xl font-semibold md:text-3xl;
+    @apply mt-6 scroll-mt-20 text-2xl font-semibold md:text-3xl;
   }
 
   h4,
   .h4 {
-    @apply mt-6 text-xl font-semibold md:text-2xl;
+    @apply mt-6 scroll-mt-20 text-xl font-semibold md:text-2xl;
   }
 }
 

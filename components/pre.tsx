@@ -6,7 +6,7 @@ interface IPre extends HTMLAttributes<HTMLPreElement> {
   className?: string;
 }
 export default function Pre({ className, ...props }: IPre) {
-  const textInput = useRef(null);
+  const textInput = useRef<any>(null);
   const [hovered, setHovered] = useState(false);
   const [copied, setCopied] = useState(false);
 

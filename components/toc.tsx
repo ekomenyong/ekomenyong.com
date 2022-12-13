@@ -1,5 +1,6 @@
 "use client";
 
+import { clsxm } from "@/utils";
 import { Disclosure } from "@headlessui/react";
 import GithubSlugger from "github-slugger";
 import React, {
@@ -70,10 +71,6 @@ const useIntersectionObserver = (
   }, [setActiveId]);
 };
 
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(" ");
-}
-
 const TableOfContents: FC<TOCProps> = ({ source }) => {
   const headingLines = source
     .split("\n")
@@ -114,7 +111,7 @@ const TableOfContents: FC<TOCProps> = ({ source }) => {
                 </span>
                 <span className="ml-20 flex items-center md:ml-16">
                   <RiArrowDownSLine
-                    className={classNames(
+                    className={clsxm(
                       open ? "-rotate-180" : "rotate-0",
                       "h-6 w-6 transform"
                     )}
@@ -132,18 +129,20 @@ const TableOfContents: FC<TOCProps> = ({ source }) => {
                   <button
                     key={index}
                     type="button"
-                    className={`${
-                      heading.id === activeId ? "font-medium" : "font-normal"
-                    } ${
-                      heading.level === 2 ? "pl-2" : "hidden"
-                    } animate-underline mb-4 text-sm text-zinc-700 last:mb-6`}
+                    className={clsxm(
+                      heading.id === activeId ? "font-medium" : "font-normal",
+                      heading.level === 2 ? "pl-2" : "hidden",
+                      "mb-4 text-sm text-zinc-700 last:mb-6 hover:underline"
+                    )}
                     onClick={(e) => {
                       e.preventDefault();
-                      document.querySelector(`#${heading.id}`).scrollIntoView({
-                        behavior: "smooth",
-                        block: "start",
-                        inline: "nearest",
-                      });
+                      document
+                        .querySelector<any>(`#${heading.id}`)
+                        .scrollIntoView({
+                          behavior: "smooth",
+                          block: "start",
+                          inline: "nearest",
+                        });
                     }}
                   >
                     {heading.text}

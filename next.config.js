@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 
-const withPlugins = require("next-compose-plugins");
 const { withContentlayer } = require("next-contentlayer");
 const nextConfig = {
   reactStrictMode: true,
@@ -14,4 +13,4 @@ const nextConfig = {
   },
 };
 
-module.exports = withPlugins([[withContentlayer]], nextConfig);
+module.exports = withContentlayer(nextConfig);

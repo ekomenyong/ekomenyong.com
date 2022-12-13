@@ -2,12 +2,12 @@ import KommyLink, { TKommyLink } from "./a";
 import KommyImage, { TKommyImage } from "./image";
 
 interface ITag {
-  name: string;
+  name: string[];
 }
 
 type TBlogCard = {
   title: string;
-  tags: ITag[];
+  tags?: string[];
   readingTime: string;
 } & TKommyImage &
   TKommyLink;
@@ -36,16 +36,21 @@ const BlogCard = ({ href, src, alt, title, tags, readingTime }: TBlogCard) => {
           />
         </div>
 
-        <div className="flex h-60 flex-col items-start justify-between p-4">
-          <h3 className="inline font-semibold capitalize leading-6">{title}</h3>
+        <div className="flex h-80 flex-col items-start justify-between p-4">
+          <h3 className="inline font-semibold capitalize leading-8">{title}</h3>
 
           <div className="flex flex-col items-start justify-start">
             <p className="text-sm lowercase text-gray-500">{readingTime}</p>
-            <div className="space-x-1">
-              {tags.map((t, index) => (
-                <Tag key={index} name={t.name} />
-              ))}
-            </div>
+            {tags?.length ? (
+              <div className="space-x-1">
+                {tags.map((t, index) => (
+                  // <Tag key={index} name={t.name} />
+                  <span className="inline-flex text-xs font-normal uppercase tracking-wide before:content-['#'] after:ml-1 after:content-['•'] last:after:content-none">
+                    {t}
+                  </span>
+                ))}
+              </div>
+            ) : null}
           </div>
         </div>
       </KommyLink>

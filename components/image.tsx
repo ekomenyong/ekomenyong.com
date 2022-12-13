@@ -4,32 +4,26 @@ import { clsxm } from "@/utils";
 import Image, { ImageProps } from "next/image";
 import { useState } from "react";
 
-export type TKommyImage = {
+interface IKommyImage extends ImageProps {
   useSkeleton?: boolean;
-  blurClassName?: string;
-} & ImageProps;
+}
 
 export default function KommyImage({
   useSkeleton = false,
-  blurClassName,
   src,
   alt,
-  width,
-  height,
   className,
   ...rest
-}: TKommyImage) {
+}: IKommyImage) {
   const [status, setStatus] = useState(useSkeleton ? "loading" : "complete");
   return (
     <Image
       className={clsxm(
         "object-cover object-center",
         className,
-        status === "loading" && clsxm("animate-pulse", blurClassName)
+        status === "loading" && "animate-pulse"
       )}
       src={src}
-      width={width}
-      height={height}
       alt={alt}
       onLoadingComplete={() => setStatus("complete")}
       {...rest}

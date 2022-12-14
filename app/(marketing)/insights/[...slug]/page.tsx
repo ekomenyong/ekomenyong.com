@@ -5,13 +5,11 @@ import {
   Container,
   BlogHeader,
   KommyLink,
-  Callout,
-  BlogFooter,
   MDXComponents,
   KommyImage,
 } from "@/components";
 import "./mdx.css";
-import { formatDate } from "@/utils";
+import { formatDate, shimmer, toBase64 } from "@/utils";
 
 interface ISingleBlogPost {
   params: {
@@ -40,7 +38,20 @@ export default function SingleBlogPost({ params }: ISingleBlogPost) {
   return (
     <>
       <BlogHeader
-        authorName="Ekom Enyong"
+        authorName={
+          authors?.length ? (
+            authors.map((author) => (
+              <span
+                key={author?._id}
+                className="after:content-[',_'] last-of-type:before:content-['and_'] last-of-type:after:content-none only-of-type:before:content-none"
+              >
+                {author?.name}
+              </span>
+            ))
+          ) : (
+            <span />
+          )
+        }
         coverImageAttributionLink={post.cover_image_attribution_link}
         coverImageAttributionText={post.cover_image_attribution_text}
         date={formatDate(post.date)}
@@ -59,11 +70,14 @@ export default function SingleBlogPost({ params }: ISingleBlogPost) {
               {authors.map((author) => (
                 <div className="flex flex-row items-center justify-start">
                   <KommyImage
-                    useSkeleton
                     src={`${author?.avatar}`}
                     width={48}
                     height={48}
                     alt={`Avatar of ${author?.name}`}
+                    placeholder="blur"
+                    blurDataURL={`data:image/svg+xml;base64,${toBase64(
+                      shimmer(48, 48)
+                    )}`}
                     className="my-0 mr-4 hidden h-10 w-10 rounded-full object-cover object-center lg:inline-block"
                   />
                   <p className="m-0 text-lg text-zinc-600">

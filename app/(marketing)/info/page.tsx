@@ -42,13 +42,15 @@ export default function AboutPage() {
         </p>
         <div className="flex flex-row space-x-4">
           <span>↳</span>
-          <KommyLink href="#">Email</KommyLink>
+          <KommyLink href="mailto:hello@ekomenyong.com">Email</KommyLink>
           <span>/</span>
-          <KommyLink href="#">Twitter</KommyLink>
+          <KommyLink href="https://twitter.com/EkomEnyong">Twitter</KommyLink>
           <span>/</span>
-          <KommyLink href="#">LinkedIn</KommyLink>
+          <KommyLink href="https://linkedin.com/in/ekomenyong">
+            LinkedIn
+          </KommyLink>
           <span>/</span>
-          <KommyLink href="#">Github</KommyLink>
+          <KommyLink href="https://github.com/ekomenyong">Github</KommyLink>
         </div>
       </div>
     </Container>

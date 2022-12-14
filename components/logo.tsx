@@ -1,7 +1,7 @@
 import Image from "next/image";
 import KommyLink from "./a";
 import logoImage from "../public/logo.svg";
-import { clsxm } from "@/utils";
+import { clsxm, shimmer, toBase64 } from "@/utils";
 
 interface ILogo {
   textSize?: string;

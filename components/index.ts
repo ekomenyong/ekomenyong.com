@@ -1,6 +1,5 @@
 export { default as KommyLink } from "./a";
 export { default as AboutSection } from "./about-section";
-export { default as BlogFooter } from "./blog-footer";
 export { default as BlogHeader } from "./blog-header";
 export { default as BlogSection } from "./blog-section";
 export { default as Callout } from "./callout";

@@ -61,9 +61,7 @@ const useIntersectionObserver = (
       rootMargin: "0px 0px -70% 0px",
     });
 
-    const headingElements = Array.from(
-      document.querySelectorAll(".article h2")
-    );
+    const headingElements = Array.from(document.querySelectorAll("article h2"));
 
     headingElements.forEach((element) => observer.observe(element));
 
@@ -130,8 +128,10 @@ const TableOfContents: FC<TOCProps> = ({ source }) => {
                     key={index}
                     type="button"
                     className={clsxm(
-                      heading.id === activeId ? "font-medium" : "font-normal",
-                      heading.level === 2 ? "pl-2" : "hidden",
+                      heading.id === activeId ? "font-semibold" : "font-normal",
+                      heading.level === 2 && "pl-2 font-semibold",
+                      heading.level === 3 && "pl-4",
+                      heading.level === 4 && "pl-6 italic",
                       "mb-4 text-sm text-zinc-700 last:mb-6 hover:underline"
                     )}
                     onClick={(e) => {

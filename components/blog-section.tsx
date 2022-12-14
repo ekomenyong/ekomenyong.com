@@ -1,3 +1,4 @@
+import { shimmer, toBase64 } from "@/utils";
 import { Post } from "contentlayer/generated";
 import KommyLink from "./a";
 import Container from "./container";
@@ -23,11 +24,14 @@ export default function BlogSection({ posts }: { posts: Post[] }) {
                 >
                   <div className="h-[200px] w-full overflow-clip rounded-t-md">
                     <KommyImage
-                      useSkeleton
                       src={p.cover_image}
                       alt={p.title}
                       width={330}
                       height={200}
+                      placeholder="blur"
+                      blurDataURL={`data:image/svg+xml;base64,${toBase64(
+                        shimmer(330, 200)
+                      )}`}
                       className="group-hover:blog-scale h-full object-cover object-center"
                       priority
                     />

@@ -1,31 +1,21 @@
 "use client";
 
-import { clsxm } from "@/utils";
+import { clsxm, shimmer, toBase64 } from "@/utils";
 import Image, { ImageProps } from "next/image";
-import { useState } from "react";
 
-interface IKommyImage extends ImageProps {
-  useSkeleton?: boolean;
-}
+export interface IKommyImage extends ImageProps {}
 
 export default function KommyImage({
-  useSkeleton = false,
   src,
   alt,
   className,
   ...rest
 }: IKommyImage) {
-  const [status, setStatus] = useState(useSkeleton ? "loading" : "complete");
   return (
     <Image
-      className={clsxm(
-        "object-cover object-center",
-        className,
-        status === "loading" && "animate-pulse"
-      )}
+      className={clsxm("object-cover object-center", className)}
       src={src}
       alt={alt}
-      onLoadingComplete={() => setStatus("complete")}
       {...rest}
     />
   );

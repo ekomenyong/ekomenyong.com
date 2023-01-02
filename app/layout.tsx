@@ -52,10 +52,14 @@ export default function RootLayout({ children }: IRootLayout) {
   return (
     <html
       lang="en"
-      className={clsxm("bg-light text-dark", neueMontreal.variable, lilex.variable)}
+      className={clsxm(
+        "bg-light text-dark antialiased",
+        neueMontreal.variable,
+        lilex.variable
+      )}
     >
       <head />
-      <body className="min-h-screen bg-light bg-hero-gradient bg-contain bg-top bg-no-repeat">
+      <body className="min-h-screen bg-light bg-hero-gradient bg-contain bg-top bg-no-repeat text-dark">
         {children}
         <Analytics />
         <TailwindIndicator />

@@ -17,3 +17,4 @@ export { default as SingleBlogMeta } from "./seo/single-blog-meta";
 export { default as TailwindIndicator } from "./tailwind-indicator";
 export { default as Analytics } from "./analytics";
 export { default as PageMeta } from "./seo/page-meta";
+export { default as AboutFAQs } from "./about-faq";

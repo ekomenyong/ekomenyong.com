@@ -82,7 +82,7 @@ const TableOfContents = ({ source }: TOCProps) => {
   useIntersectionObserver(setActiveId);
 
   return (
-    <div className="mt-4 mb-0 cursor-pointer lg:sticky lg:top-20 lg:border-b lg:border-gray-400">
+    <div className="mt-4 mb-0 cursor-pointer lg:sticky lg:top-20 lg:border-b-2 lg:border-dark">
       <Disclosure
         as="div"
         className="flex flex-col items-start justify-center"
@@ -95,8 +95,8 @@ const TableOfContents = ({ source }: TOCProps) => {
                 as="h3"
                 className="mb-4 flex flex-row flex-nowrap items-center justify-start text-base font-medium text-dark"
               >
-                <span className="animated-underline font-semibold capitalize">
-                  On this page
+                <span className="animated-underline font-bold capitalize tracking-wide">
+                  Contents:
                 </span>
                 <span className="ml-20 flex items-center md:ml-16">
                   <RiArrowDownSLine
@@ -119,7 +119,7 @@ const TableOfContents = ({ source }: TOCProps) => {
                     key={index}
                     href={`#${heading.id}`}
                     className={clsxm(
-                      heading.id === activeId ? "font-semibold" : "font-normal",
+                      heading.id === activeId ? "font-medium" : "font-normal",
                       heading.level === 2 ? "pl-2" : "pl-6",
                       "mb-4 text-base text-gray-700 last:mb-6 hover:underline"
                     )}

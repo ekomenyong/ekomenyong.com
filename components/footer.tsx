@@ -19,16 +19,16 @@ export default function Footer() {
                 key={item.title}
                 href={item.href}
                 animatedUnderline
-                className="font-semibold text-dark"
+                className="font-medium text-dark"
               >
                 {item.title}
               </KommyLink>
             ))}
           </div>
         )}
-        <div className="mt-8 flex flex-row flex-nowrap items-center justify-center md:order-1 md:mt-0 md:justify-start">
-          <Logo textSize="text-base" />
-          <p className="ml-2 font-semibold">&copy; 2023</p>
+        <div className="mt-8 flex flex-row flex-nowrap items-center justify-center font-medium md:order-1 md:mt-0 md:justify-start">
+          <Logo textSize="text-base font-medium" />
+          <p className="ml-2">&copy; 2023</p>
         </div>
       </Container>
     </Container>

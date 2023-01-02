@@ -31,9 +31,9 @@ export default function BlogHeader({
           <span>&mdash;</span>
           <span>{readingTime}</span>
         </div>
-        <h1 className="mb-4 text-5xl font-semibold md:text-7xl">{title}</h1>
+        <h1 className="mb-4 text-5xl font-bold md:text-7xl">{title}</h1>
         <div className="flex flex-row justify-start text-lg md:text-xl">
-          <div>
+          <div className="font-medium">
             Written by: {authorName} &mdash; Cover Photo by:{" "}
             <KommyLink dottedLine animatedUnderline href={coverImageAttributionLink}>
               {coverImageAttributionText}

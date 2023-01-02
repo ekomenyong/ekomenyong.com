@@ -81,12 +81,12 @@ export default function SingleBlogPost({ params }: ISingleBlogPost) {
                     )}`}
                     className="my-0 mr-4 hidden h-10 w-10 rounded-full object-cover object-center lg:inline-block"
                   />
-                  <p className="m-0 text-lg text-zinc-600">
+                  <p className="m-0 text-lg text-gray-600">
                     <KommyLink
                       href={`${author?.url}`}
                       animatedUnderline
                       dottedLine
-                      className="font-semibold text-dark"
+                      className="font-medium text-dark"
                     >
                       {author?.name}
                     </KommyLink>{" "}

@@ -16,7 +16,7 @@ export default function Header() {
           <div className="flex items-center">
             <Logo />
           </div>
-          <div className="hidden font-semibold capitalize lg:inline-flex">
+          <div className="hidden font-medium capitalize lg:inline-flex">
             <p>Creating digital strategies & Web experiences</p>
           </div>
           <div className="ml-10 space-x-8">
@@ -25,7 +25,7 @@ export default function Header() {
                 key={index}
                 href={item.href}
                 animatedUnderline
-                className="text-base font-semibold tracking-wide text-dark"
+                className="text-base font-medium tracking-wide text-dark"
               >
                 {item.title}
               </KommyLink>

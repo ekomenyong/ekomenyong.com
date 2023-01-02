@@ -17,9 +17,7 @@ interface ISingleBlogPost {
   };
 }
 
-export async function generateStaticParams(): Promise<
-  ISingleBlogPost["params"][]
-> {
+export async function generateStaticParams(): Promise<ISingleBlogPost["params"][]> {
   return allPosts.map((post) => ({
     slug: post.slugAsParams.split("/"),
   }));
@@ -66,7 +64,7 @@ export default function SingleBlogPost({ params }: ISingleBlogPost) {
           <MDXComponents code={post.body.code} />
           <hr className="mt-24 mb-10 w-1/3 border border-gray-700" />
           {authors?.length ? (
-            <footer className="space-y-8">
+            <div className="space-y-8">
               {authors.map((author) => (
                 <div className="flex flex-row items-center justify-start">
                   <KommyImage
@@ -93,7 +91,7 @@ export default function SingleBlogPost({ params }: ISingleBlogPost) {
                   </p>
                 </div>
               ))}
-            </footer>
+            </div>
           ) : null}
         </article>
       </Container>

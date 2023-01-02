@@ -51,7 +51,7 @@ export default function SingleBlogMeta({ params }: ISingleBlogMeta) {
         href="/favicons/favicon-32x32.png"
       />
       <link rel="manifest" href="/favicons/site.webmanifest" />
-      <link rel="canonical" href={`${url}/${post.slug}`} />
+      <link rel="canonical" href={`${url}/insights/${post.slugAsParams}`} />
     </>
   );
 }

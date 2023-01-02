@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[EkomEnyong.com]]></title>
+        <description><![CDATA[Ekom Enyong is a professional SEO and Content marketer, web designer, and web developer based in Charlotte.]]></description>
+        <link>https://ekomenyong.com</link>
+        <image>
+            <url>https://ekomenyong.com/og.jpg</url>
+            <title>EkomEnyong.com</title>
+            <link>https://ekomenyong.com</link>
+        </image>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Mon, 02 Jan 2023 05:26:46 GMT</lastBuildDate>
+        <atom:link href="https://ekomenyong.com/feed.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Building an Organic Search Landing Page that Converts at 74%]]></title>
+            <description><![CDATA[This summary has the word carrots]]></description>
+            <link>https://ekomenyong.com/insights/posts/this-is-a-test-post</link>
+            <guid isPermaLink="true">https://ekomenyong.com/insights/posts/this-is-a-test-post</guid>
+            <category><![CDATA[seo]]></category>
+            <category><![CDATA[landing page]]></category>
+            <category><![CDATA[cro]]></category>
+            <pubDate>Fri, 30 Dec 2022 05:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Guide to SEO for Jamstack Developers, by a Professional SEO]]></title>
+            <description><![CDATA[Whether you're building a Jamstack website or not, this SEO guide will give developers a foundation of SEO goals and best practices.]]></description>
+            <link>https://ekomenyong.com/insights/posts/seo-guide-jamstack-react-development</link>
+            <guid isPermaLink="true">https://ekomenyong.com/insights/posts/seo-guide-jamstack-react-development</guid>
+            <category><![CDATA[seo]]></category>
+            <category><![CDATA[jamstack]]></category>
+            <category><![CDATA[development]]></category>
+            <pubDate>Tue, 03 Jan 2023 05:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[An SEO's Guide to Looker (Google Data) Studio Calculated Fields]]></title>
+            <description><![CDATA[Learn how to create new fields in Looker Studio, formerly Google Data Studio, using calculated fields for Google Analytics 4 data.]]></description>
+            <link>https://ekomenyong.com/insights/posts/calculated-fields-google-data-studio-guide</link>
+            <guid isPermaLink="true">https://ekomenyong.com/insights/posts/calculated-fields-google-data-studio-guide</guid>
+            <category><![CDATA[looker studio]]></category>
+            <category><![CDATA[SEO]]></category>
+            <category><![CDATA[reporting]]></category>
+            <pubDate>Mon, 02 Jan 2023 05:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Build a Website from Scratch with Next.js 13 and Sanity Studio v3]]></title>
+            <description><![CDATA[Sanity Studio v3 brings a new experience to building and managing websites. Learn how to build a website from scratch with my favorite headless cms!]]></description>
+            <link>https://ekomenyong.com/insights/posts/nextjs-sanity-tailwind-series/part-1</link>
+            <guid isPermaLink="true">https://ekomenyong.com/insights/posts/nextjs-sanity-tailwind-series/part-1</guid>
+            <category><![CDATA[next.js]]></category>
+            <category><![CDATA[sanity]]></category>
+            <category><![CDATA[tutorial]]></category>
+            <pubDate>Mon, 09 Jan 2023 05:00:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>

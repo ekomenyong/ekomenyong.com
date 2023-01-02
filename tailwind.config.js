@@ -1,17 +1,17 @@
-const { colors } = require("tailwindcss/colors");
-const { fontFamily, spacing } = require("tailwindcss/defaultTheme");
-
 /** @type {import('tailwindcss').Config} */
+
+const { fontFamily } = require("tailwindcss/defaultTheme");
+
 module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
+    "./content/**/*.{md,mdx}",
   ],
   theme: {
     extend: {
       colors: {
-        ...colors,
         light: "#fafafa",
         dark: "#272727",
         brand: {

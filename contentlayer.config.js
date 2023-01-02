@@ -1,10 +1,11 @@
+import { readFileSync } from "fs";
+import readingTime from "reading-time";
 import { defineDocumentType, makeSource } from "contentlayer/source-files";
 import remarkGfm from "remark-gfm";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
-import readingTime from "reading-time";
-import { readFileSync } from "fs";
+import { rehypeAccessibleEmojis } from "rehype-accessible-emojis";
 
 /** @type {import('contentlayer/source-files').ComputedFields} */
 const computedFields = {
@@ -105,12 +106,15 @@ export default makeSource({
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [
+      rehypeAccessibleEmojis,
       rehypeSlug,
       [
         rehypePrettyCode,
         {
           // theme: "github-dark",
-          theme: JSON.parse(readFileSync("./assets/themes/moonlight-ii.json")),
+          theme: JSON.parse(
+            readFileSync("./assets/themes/OneHunter-Vercel-color-theme.json")
+          ),
           onVisitLine(node) {
             // Prevent lines from collapsing in `display: grid` mode, and allow empty
             // lines to be copy/pasted

@@ -1,7 +1,6 @@
 import { useMDXComponent } from "next-contentlayer/hooks";
 import { Callout, KommyImage, KommyLink, Pre } from "@/components";
 import { clsxm } from "@/utils";
-import { LinkProps } from "next/link";
 import React, { AllHTMLAttributes } from "react";
 
 const components = {
@@ -9,20 +8,11 @@ const components = {
   KommyImage,
   pre: Pre,
   KommyLink,
-  a: ({
-    className,
-    children,
-    ...props
-  }: React.HTMLAttributes<HTMLAnchorElement>) => (
+  a: ({ ...props }: React.HTMLAttributes<HTMLAnchorElement>) => (
     <a
-      className={clsxm(
-        "animated-underline border-b border-dotted border-dark hover:border-dark/0",
-        className
-      )}
+      className="animated-underline border-b border-dotted border-dark hover:border-dark/0"
       {...props}
-    >
-      {children}
-    </a>
+    />
   ),
   p: ({ ...props }: React.HTMLAttributes<HTMLParagraphElement>) => (
     <p className="text-xl leading-7 [&:not(:first-child)]:mt-6" {...props} />

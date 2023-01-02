@@ -1,3 +1,4 @@
+import React from "react";
 import { clsxm } from "@/utils";
 
 interface IContainer {

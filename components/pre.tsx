@@ -74,7 +74,7 @@ export default function Pre({ className, ...props }: IPre) {
       )}
       <pre
         className={clsxm(
-          "mt-6 mb-4 overflow-x-auto rounded-lg bg-slate-900 py-4 ",
+          "pre mt-6 mb-4 overflow-x-auto rounded-lg bg-slate-900 py-4",
           className
         )}
         {...props}

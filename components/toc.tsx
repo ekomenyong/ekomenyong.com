@@ -3,14 +3,7 @@
 import { clsxm } from "@/utils";
 import { Disclosure } from "@headlessui/react";
 import GithubSlugger from "github-slugger";
-import React, {
-  Dispatch,
-  FC,
-  SetStateAction,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import React, { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
 import { RiArrowDownSLine } from "react-icons/ri";
 
 interface TOCProps {
@@ -61,7 +54,7 @@ const useIntersectionObserver = (
       rootMargin: "0px 0px -70% 0px",
     });
 
-    const headingElements = Array.from(document.querySelectorAll("article h2"));
+    const headingElements = Array.from(document.querySelectorAll("h2,h3,h4"));
 
     headingElements.forEach((element) => observer.observe(element));
 
@@ -69,10 +62,8 @@ const useIntersectionObserver = (
   }, [setActiveId]);
 };
 
-const TableOfContents: FC<TOCProps> = ({ source }) => {
-  const headingLines = source
-    .split("\n")
-    .filter((line) => line.match(/^###*\s/));
+const TableOfContents = ({ source }: TOCProps) => {
+  const headingLines = source.split("\n").filter((line) => line.match(/^###*\s/));
 
   const headings = headingLines.map((raw) => {
     const text = raw.replace(/^###*\s/, "");
@@ -104,7 +95,7 @@ const TableOfContents: FC<TOCProps> = ({ source }) => {
                 as="h3"
                 className="mb-4 flex flex-row flex-nowrap items-center justify-start text-base font-medium text-dark"
               >
-                <span className="animated-underline font-semibold">
+                <span className="animated-underline font-semibold capitalize">
                   On this page
                 </span>
                 <span className="ml-20 flex items-center md:ml-16">
@@ -124,29 +115,25 @@ const TableOfContents: FC<TOCProps> = ({ source }) => {
             >
               {headings.map((heading, index) => {
                 return (
-                  <button
+                  <a
                     key={index}
-                    type="button"
+                    href={`#${heading.id}`}
                     className={clsxm(
                       heading.id === activeId ? "font-semibold" : "font-normal",
-                      heading.level === 2 && "pl-2 font-semibold",
-                      heading.level === 3 && "pl-4",
-                      heading.level === 4 && "pl-6 italic",
-                      "mb-4 text-sm text-zinc-700 last:mb-6 hover:underline"
+                      heading.level === 2 ? "pl-2" : "pl-6",
+                      "mb-4 text-base text-gray-700 last:mb-6 hover:underline"
                     )}
                     onClick={(e) => {
                       e.preventDefault();
-                      document
-                        .querySelector<any>(`#${heading.id}`)
-                        .scrollIntoView({
-                          behavior: "smooth",
-                          block: "start",
-                          inline: "nearest",
-                        });
+                      document.querySelector<any>(`#${heading.id}`).scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                        inline: "nearest",
+                      });
                     }}
                   >
                     {heading.text}
-                  </button>
+                  </a>
                 );
               })}
             </Disclosure.Panel>

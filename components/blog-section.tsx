@@ -10,7 +10,7 @@ export default function BlogSection({ posts }: { posts: Post[] }) {
       <span className="font-mono text-sm font-semibold lowercase text-gray-500">
         scroll &rarr;
       </span>
-      <div className="flex flex-row items-start justify-start space-x-8 overflow-x-auto pb-8">
+      <div className="flex flex-row items-start justify-start space-x-6 overflow-x-auto pb-8">
         {posts?.length ? (
           <>
             {posts.map((p) => (
@@ -18,10 +18,7 @@ export default function BlogSection({ posts }: { posts: Post[] }) {
                 key={p._id}
                 className="group w-[330px] flex-none rounded-md border border-gray-300"
               >
-                <KommyLink
-                  href={`/insights/${p.slugAsParams}`}
-                  className="group"
-                >
+                <KommyLink href={`/insights/${p.slugAsParams}`} className="group">
                   <div className="h-[200px] w-full overflow-clip rounded-t-md">
                     <KommyImage
                       src={p.cover_image}
@@ -32,15 +29,13 @@ export default function BlogSection({ posts }: { posts: Post[] }) {
                       blurDataURL={`data:image/svg+xml;base64,${toBase64(
                         shimmer(330, 200)
                       )}`}
-                      className="group-hover:blog-scale h-full object-cover object-center"
+                      className="group-hover:blog-scale h-full w-full object-cover object-center"
                       priority
                     />
                   </div>
 
                   <div className="flex h-80 flex-col items-start justify-between p-4">
-                    <h3 className="inline font-semibold capitalize leading-8">
-                      {p.title}
-                    </h3>
+                    <h3 className="inline font-semibold  leading-8">{p.title}</h3>
 
                     <div className="flex flex-col items-start justify-start">
                       <p className="text-sm lowercase text-gray-500">

@@ -1,6 +1,7 @@
 import "./globals.css";
 import { clsxm } from "@/utils";
 import localFont from "@next/font/local";
+import { Analytics, TailwindIndicator } from "@/components";
 
 const neueMontreal = localFont({
   src: [
@@ -16,13 +17,13 @@ const neueMontreal = localFont({
     },
     {
       path: "../assets/fonts/NeueMontreal-Medium.woff2",
-      weight: "600",
+      weight: "500",
       style: "normal",
     },
     {
-      path: "../assets/fonts/NeueMontreal-Medium.woff2",
-      weight: "600",
-      style: "normal",
+      path: "../assets/fonts/NeueMontreal-MediumItalic.woff2",
+      weight: "500",
+      style: "italic",
     },
   ],
   variable: "--font-neue",
@@ -51,15 +52,13 @@ export default function RootLayout({ children }: IRootLayout) {
   return (
     <html
       lang="en"
-      className={clsxm(
-        "bg-light text-dark",
-        neueMontreal.variable,
-        lilex.variable
-      )}
+      className={clsxm("bg-light text-dark", neueMontreal.variable, lilex.variable)}
     >
       <head />
       <body className="min-h-screen bg-light bg-hero-gradient bg-contain bg-top bg-no-repeat">
         {children}
+        <Analytics />
+        <TailwindIndicator />
       </body>
     </html>
   );

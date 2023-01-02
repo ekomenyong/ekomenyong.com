@@ -18,8 +18,6 @@
     "paths": {
       "@/components": ["components"],
       "@/config/*": ["config/*"],
-      "@/fonts": ["config/fonts"],
-      "@/hooks/*": ["hooks/*"],
       "@/utils": ["utils"],
       "contentlayer/generated": ["./.contentlayer/generated"]
     },

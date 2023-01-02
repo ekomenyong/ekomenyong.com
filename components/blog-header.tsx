@@ -34,12 +34,8 @@ export default function BlogHeader({
         <h1 className="mb-4 text-5xl font-semibold md:text-7xl">{title}</h1>
         <div className="flex flex-row justify-start text-lg md:text-xl">
           <div>
-            Written by: {authorName} &mdash; Cover Image by:{" "}
-            <KommyLink
-              dottedLine
-              animatedUnderline
-              href={coverImageAttributionLink}
-            >
+            Written by: {authorName} &mdash; Cover Photo by:{" "}
+            <KommyLink dottedLine animatedUnderline href={coverImageAttributionLink}>
               {coverImageAttributionText}
             </KommyLink>
           </div>
@@ -52,9 +48,7 @@ export default function BlogHeader({
         alt={imgAlt}
         className="my-8 h-[280px] w-full rounded-md border border-gray-300 object-cover object-center animate-in fade-in duration-2000 md:h-[500px]"
         placeholder="blur"
-        blurDataURL={`data:image/svg+xml;base64,${toBase64(
-          shimmer(1200, 630)
-        )}`}
+        blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(1200, 630))}`}
         priority
       />
     </Container>

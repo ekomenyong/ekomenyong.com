@@ -14,3 +14,5 @@ export { default as TableOfContents } from "./toc";
 export { default as Pre } from "./pre";
 export { MDXComponents } from "./mdx";
 export { default as SingleBlogMeta } from "./seo/single-blog-meta";
+export { default as TailwindIndicator } from "./tailwind-indicator";
+export { default as Analytics } from "./analytics";

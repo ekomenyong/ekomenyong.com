@@ -1,15 +1,15 @@
 import { clsxm } from "@/utils";
 import Link, { LinkProps } from "next/link";
-import { AllHTMLAttributes, ReactNode } from "react";
+import React from "react";
 
 export type TKommyLink = {
+  href: string;
   showIcon?: boolean;
   dottedLine?: boolean;
   animatedUnderline?: boolean;
-  className?: string;
-  children?: ReactNode;
-} & LinkProps &
-  AllHTMLAttributes<HTMLAnchorElement>;
+  children?: React.ReactNode;
+} & Omit<LinkProps, "href"> &
+  React.HTMLAttributes<HTMLAnchorElement>;
 
 export default function KommyLink({
   showIcon = false,
@@ -27,8 +27,7 @@ export default function KommyLink({
       <Link
         href={href}
         className={clsxm(
-          dottedLine &&
-            "border-b border-dotted border-dark hover:border-dark/0",
+          dottedLine && "border-b border-dotted border-dark hover:border-dark/0",
           animatedUnderline && "animated-underline",
           className
         )}

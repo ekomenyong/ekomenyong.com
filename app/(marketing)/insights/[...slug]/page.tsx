@@ -66,7 +66,10 @@ export default function SingleBlogPost({ params }: ISingleBlogPost) {
           {authors?.length ? (
             <div className="space-y-8">
               {authors.map((author) => (
-                <div className="flex flex-row items-center justify-start">
+                <div
+                  key={author?._id}
+                  className="flex flex-row items-center justify-start"
+                >
                   <KommyImage
                     src={`${author?.avatar}`}
                     width={48}

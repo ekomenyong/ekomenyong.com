@@ -32,7 +32,7 @@ export default function SingleBlogMeta({ params }: ISingleBlogMeta) {
       <meta name="twitter:site" content="@ekomenyong" />
       <meta name="twitter:description" content={post.description} />
       <meta name="twitter:image" content={post.og_image || post.cover_image} />
-      <link rel="icon" href="/favicon.ico" />
+      <link rel="icon" href="/favicons/favicon.ico" />
       <link
         rel="apple-touch-icon"
         sizes="180x180"

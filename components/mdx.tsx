@@ -1,7 +1,7 @@
 import { useMDXComponent } from "next-contentlayer/hooks";
-import { Callout, KommyImage, KommyLink, Pre } from "@/components";
-import { clsxm } from "@/utils";
-import React, { AllHTMLAttributes } from "react";
+import { Callout, KommyImage, KommyLink, Pre } from "components";
+import { clsxm } from "utils";
+import React from "react";
 
 const components = {
   Callout,
@@ -14,8 +14,11 @@ const components = {
       {...props}
     />
   ),
-  p: ({ ...props }: React.HTMLAttributes<HTMLParagraphElement>) => (
-    <p className="text-xl leading-7 [&:not(:first-child)]:mt-6" {...props} />
+  p: ({ className, ...props }: React.HTMLAttributes<HTMLParagraphElement>) => (
+    <p
+      className={clsxm("text-xl leading-7 [&:not(:first-child)]:mt-6", className)}
+      {...props}
+    />
   ),
   ul: ({ ...props }) => (
     <ul className="my-6 ml-6 list-outside list-disc text-xl" {...props} />

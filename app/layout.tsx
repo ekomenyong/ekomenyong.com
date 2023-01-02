@@ -1,7 +1,7 @@
 import "./globals.css";
-import { clsxm } from "@/utils";
+import { clsxm } from "utils";
 import localFont from "@next/font/local";
-import { Analytics, TailwindIndicator } from "@/components";
+import { Analytics, TailwindIndicator } from "components";
 
 const neueMontreal = localFont({
   src: [

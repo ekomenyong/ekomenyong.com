@@ -14,7 +14,7 @@ export default function SingleBlogMeta({ params }: ISingleBlogMeta) {
     return null;
   }
 
-  const title = `${post.title} » Ekom Enyong`;
+  const title = `${post.title} » EkomEnyong.com`;
   const url = process.env.NEXT_PUBLIC_APP_URL;
   return (
     <>

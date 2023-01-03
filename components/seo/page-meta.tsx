@@ -21,11 +21,11 @@ export default function PageMeta({ title, description, slug }: IPageMeta) {
       <meta property="og:description" content={description} />
       <meta property="og:type" content="website" />
       <meta property="og:url" content={url + `/${slug}`} />
-      <meta property="og:image" content={url + "/og.jpg"} />
+      <meta property="og:image" content="/og.jpg" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:card" content={site.seo.twitterCard} />
       <meta name="twitter:site" content={site.seo.twitterHandle} />
-      <meta name="twitter:image" content={url + "/og.jpg"} />
+      <meta name="twitter:image" content="/og.jpg" />
       <meta name="robots" content="index, follow" />
       <link rel="icon" href="/favicons/favicon.ico" />
       <link

@@ -52,6 +52,7 @@ const nextConfig = {
       },
     ];
   },
+  trailingSlash: false,
 };
 
 export default withContentlayer(nextConfig);

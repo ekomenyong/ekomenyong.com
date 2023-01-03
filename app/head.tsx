@@ -17,7 +17,7 @@ export default function Head() {
         content="Ekom Enyong is a professional SEO and Content marketer, web designer, and web developer based in Charlotte."
       />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://ekomenyong.com" />
+      <meta property="og:url" content="https://ekomenyong.com/" />
       <meta property="og:image" content="/og.jpg" />
       <meta
         name="twitter:title"
@@ -46,7 +46,7 @@ export default function Head() {
         href="/favicons/favicon-32x32.png"
       />
       <link rel="manifest" href="/favicons/site.webmanifest" />
-      <link rel="canonical" href="https://ekomenyong.com" />
+      <link rel="canonical" href="https://ekomenyong.com/" />
     </>
   );
 }

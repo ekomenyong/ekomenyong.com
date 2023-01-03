@@ -1,6 +1,6 @@
 "use client";
 
-import { clsxm } from "@/utils";
+import { clsxm } from "utils";
 import { Disclosure } from "@headlessui/react";
 import GithubSlugger from "github-slugger";
 import React, { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";

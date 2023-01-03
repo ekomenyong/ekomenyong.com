@@ -50,7 +50,7 @@ module.exports = {
       2500: "2500ms",
     },
     backgroundImage: {
-      "hero-gradient": "url('/hero-gradient.png')",
+      "hero-gradient": "url('/hero-gradient.webp')",
     },
   },
   plugins: [

@@ -7,9 +7,9 @@ import {
   KommyLink,
   MDXComponents,
   KommyImage,
-} from "@/components";
+} from "components";
 import "./mdx.css";
-import { formatDate, shimmer, toBase64 } from "@/utils";
+import { formatDate, shimmer, toBase64 } from "utils";
 
 interface ISingleBlogPost {
   params: {
@@ -62,7 +62,20 @@ export default function SingleBlogPost({ params }: ISingleBlogPost) {
         <TableOfContents source={post.body.raw} />
         <article className="max-w-full px-4 pb-8 text-dark lg:max-w-3xl">
           <MDXComponents code={post.body.code} />
-          <hr className="mt-24 mb-10 w-1/3 border border-gray-700" />
+          <p className="mt-4 text-xl text-dark">
+            I would love to hear your comments, revisions, or suggestions on this
+            post. Let's{" "}
+            <KommyLink
+              dottedLine
+              animatedUnderline
+              href={`https://twitter.com/intent/tweet?text=${post.title}
+                &url=https://ekomenyong.com/insights/${post.slugAsParams}`}
+            >
+              discuss it on Twitter
+            </KommyLink>
+            !
+          </p>
+          <hr className="my-16 w-1/3 border border-gray-700" />
           {authors?.length ? (
             <div className="space-y-8">
               {authors.map((author) => (

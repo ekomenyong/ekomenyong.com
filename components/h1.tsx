@@ -1,4 +1,4 @@
-import { clsxm } from "@/utils";
+import { clsxm } from "utils";
 import { HTMLAttributes, ReactNode } from "react";
 
 interface IH1 extends HTMLAttributes<HTMLHeadingElement> {

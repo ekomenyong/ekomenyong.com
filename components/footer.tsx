@@ -1,8 +1,5 @@
-import { navigation } from "@/config/navigation";
-import KommyLink from "./a";
-import Container from "./container";
-import Logo from "./logo";
-
+import { navigation } from "config";
+import { KommyLink, Container, Logo } from "components";
 const nav = navigation.footerNav;
 export default function Footer() {
   return (
@@ -28,7 +25,7 @@ export default function Footer() {
         )}
         <div className="mt-8 flex flex-row flex-nowrap items-center justify-center font-medium md:order-1 md:mt-0 md:justify-start">
           <Logo textSize="text-base font-medium" />
-          <p className="ml-2">&copy; 2023</p>
+          <p className="ml-2">&copy; 2023 &mdash; Design and development by me.</p>
         </div>
       </Container>
     </Container>

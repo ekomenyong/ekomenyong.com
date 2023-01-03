@@ -1,7 +1,6 @@
-import Image from "next/image";
-import KommyLink from "./a";
+import { KommyLink, KommyImage } from "components";
 import logoImage from "../public/logo.svg";
-import { clsxm, shimmer, toBase64 } from "@/utils";
+import { clsxm } from "utils";
 
 interface ILogo {
   textSize?: string;
@@ -12,12 +11,12 @@ export default function Logo({ textSize }: ILogo) {
     <KommyLink
       href="/"
       className={clsxm(
-        "flex flex-row flex-nowrap items-center justify-start font-semibold capitalize text-dark hover:animate-jelly",
+        "flex flex-row flex-nowrap items-center justify-start font-bold capitalize text-dark hover:animate-jelly",
         textSize ? textSize : "text-xl "
       )}
     >
       <span className="sr-only">Ekom Enyong</span>
-      <Image
+      <KommyImage
         src={logoImage}
         width={48}
         height={48}

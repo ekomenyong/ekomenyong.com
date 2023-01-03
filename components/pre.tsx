@@ -1,14 +1,14 @@
 "use client";
-import { clsxm } from "@/utils";
-import { HTMLAttributes, useRef, useState } from "react";
+import { clsxm } from "utils";
+import React from "react";
 
-interface IPre extends HTMLAttributes<HTMLPreElement> {
+interface IPre extends React.HTMLAttributes<HTMLPreElement> {
   className?: string;
 }
 export default function Pre({ className, ...props }: IPre) {
-  const textInput = useRef<any>(null);
-  const [hovered, setHovered] = useState(false);
-  const [copied, setCopied] = useState(false);
+  const textInput = React.useRef<any>(null);
+  const [hovered, setHovered] = React.useState(false);
+  const [copied, setCopied] = React.useState(false);
 
   const onEnter = () => {
     setHovered(true);
@@ -36,7 +36,7 @@ export default function Pre({ className, ...props }: IPre) {
           aria-label="Copy code"
           type="button"
           className={clsxm(
-            "absolute right-2 top-2 z-50 h-8 w-8 rounded border-2 bg-slate-800 p-1",
+            "absolute right-2 top-2 z-50 h-8 w-8 rounded border-2 bg-gray-800 p-1",
             copied
               ? "border-green-400 focus:border-green-400 focus:outline-none"
               : "border-gray-300"

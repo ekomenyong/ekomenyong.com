@@ -26,6 +26,7 @@ export default function PageMeta({ title, description, slug }: IPageMeta) {
       <meta name="twitter:card" content={site.seo.twitterCard} />
       <meta name="twitter:site" content={site.seo.twitterHandle} />
       <meta name="twitter:image" content={url + "/og.jpg"} />
+      <meta name="robots" content="index, follow" />
       <link rel="icon" href="/favicons/favicon.ico" />
       <link
         rel="apple-touch-icon"

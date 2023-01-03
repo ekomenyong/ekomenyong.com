@@ -1,4 +1,4 @@
-import { AboutSection, BlogSection, Container, H1Heading } from "@/components";
+import { AboutSection, BlogSection, Container, H1Heading } from "components";
 import { allPosts } from "contentlayer/generated";
 import { compareDesc } from "date-fns";
 
@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <Container as="section" className="py-12">
       <div className="py-24 md:pt-32 md:pb-24">
-        <H1Heading className="animate-in slide-in-from-left duration-1000">
+        <H1Heading className="animate-in slide-in-from-left duration-500">
           Crafting Custom Digital Strategies & Web Experiences
         </H1Heading>
       </div>

@@ -1,8 +1,6 @@
-import { shimmer, toBase64 } from "@/utils";
+import { formatDate, shimmer, toBase64 } from "utils";
 import { Post } from "contentlayer/generated";
-import KommyLink from "./a";
-import Container from "./container";
-import KommyImage from "./image";
+import { Container, KommyImage, KommyLink } from "components";
 
 export default function BlogSection({ posts }: { posts: Post[] }) {
   return (
@@ -18,7 +16,10 @@ export default function BlogSection({ posts }: { posts: Post[] }) {
                 key={p._id}
                 className="group w-[330px] flex-none rounded-md border border-gray-300"
               >
-                <KommyLink href={`/insights/${p.slugAsParams}`} className="group">
+                <KommyLink
+                  href={`/insights/${p.slugAsParams}`}
+                  className="group flex flex-col"
+                >
                   <div className="h-[200px] w-full overflow-clip rounded-t-md">
                     <KommyImage
                       src={p.cover_image}
@@ -35,8 +36,12 @@ export default function BlogSection({ posts }: { posts: Post[] }) {
                   </div>
 
                   <div className="flex h-80 flex-col items-start justify-between p-4">
-                    <h3 className="inline font-semibold  leading-8">{p.title}</h3>
-
+                    <div className="flex flex-col">
+                      <span className="text-sm italic">{formatDate(p.date)}</span>
+                      <h2 className="h3 mt-1 inline font-semibold leading-8">
+                        {p.title}
+                      </h2>
+                    </div>
                     <div className="flex flex-col items-start justify-start">
                       <p className="text-sm lowercase text-gray-500">
                         {p.readingTime.text}

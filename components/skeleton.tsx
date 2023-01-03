@@ -1,13 +1,10 @@
-import { HTMLAttributes } from "react";
-import { clsxm } from "@/utils";
+import React from "react";
+import { clsxm } from "utils";
 
-interface ISkeleton extends HTMLAttributes<HTMLDivElement> {}
+interface ISkeleton extends React.HTMLAttributes<HTMLDivElement> {}
 
 export default function Skeleton({ className, ...props }: ISkeleton) {
   return (
-    <div
-      className={clsxm("animate-pulse bg-slate-200", className)}
-      {...props}
-    />
+    <div className={clsxm("animate-pulse bg-gray-300", className)} {...props} />
   );
 }

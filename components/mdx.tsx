@@ -59,7 +59,7 @@ const components = {
   code: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
     <code
       className={clsxm(
-        "relative rounded border bg-slate-300 bg-opacity-25 py-[0.2rem] px-[0.3rem] font-mono text-base text-slate-700",
+        "relative rounded border bg-gray-300 bg-opacity-25 py-[0.2rem] px-[0.3rem] font-mono text-base text-gray-600",
         className
       )}
       {...props}

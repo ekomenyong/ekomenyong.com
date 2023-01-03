@@ -1,7 +1,5 @@
-import { navigation } from "@/config/navigation";
-import KommyLink from "./a";
-import Container from "./container";
-import Logo from "./logo";
+import { navigation } from "config";
+import { KommyLink, Container, Logo } from "components";
 
 const nav = navigation.mainNav;
 export default function Header() {
@@ -9,7 +7,7 @@ export default function Header() {
     <Container
       as="header"
       fullSize
-      className="border-b border-dark animate-in slide-in-from-top duration-1000 lg:border-none"
+      className="border-b border-dark animate-in slide-in-from-top duration-500 lg:border-none"
     >
       <Container as="nav" aria-label="Top">
         <div className="flex w-full items-center justify-between py-6">

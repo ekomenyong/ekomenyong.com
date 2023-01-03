@@ -16,9 +16,6 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@/components": ["components"],
-      "@/config/*": ["config/*"],
-      "@/utils": ["utils"],
       "contentlayer/generated": ["./.contentlayer/generated"]
     },
     "plugins": [

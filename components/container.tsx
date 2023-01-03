@@ -1,5 +1,4 @@
-import React from "react";
-import { clsxm } from "@/utils";
+import { clsxm } from "utils";
 
 interface IContainer {
   fullSize?: boolean;

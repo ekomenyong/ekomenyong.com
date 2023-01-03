@@ -11,59 +11,66 @@ const faqs = [
       "Sometimes, it feels like everything, to be honest. But I'm basically a one-woman agency. I create and implement organic growth strategies, write content, design and build websites, manage multiple projects, analyze data, provide reporting, and speak at conferences from time to time. I'm probably forgetting a couple of things but–",
   },
   {
-    question: "You seriously expect people to believe you do all of those things?",
+    question:
+      "Do you seriously expect people to believe you do all of those things?",
     answer:
-      "Um... yes? I'm pretty passionate about all things digital, so throughout my career, I've always expanded my knowledge and skillset beyond marketing to include design and development.",
+      "Um... yes? I'm passionate about all things digital, so throughout my career, I've continuously expanded my knowledge and skillset beyond marketing to design and development.",
   },
   {
     question:
-      "If you already had a marketing career, why did you start teaching yourself code?",
+      "Why did you start teaching yourself code if you already had a marketing career?",
     answer:
-      "I guess WordPress is my coding-villain origin backstory. Back when Google first introduced Page Speed metrics as part of the search algorithm, clients were begging me to make their websites faster. Most of my clients were using WordPress, so I learned how to develop themes from scratch instead of using clunky page builders. Over the years, I got interested in React and now love building with Next.js.",
+      "WordPress is my coding-villain origin backstory. When Google introduced Page Speed metrics as part of the search algorithm, clients were begging me to make their websites faster. Most of my clients were using WordPress, so I learned how to develop themes from scratch instead of using clunky page builders. Over the years, I got interested in React and now love building with Next.js.",
   },
   {
     question: "So are you not doing the whole SEO thing anymore?",
     answer:
-      "I thought that I just told you I am currently the SEO manager at Patron Manager. But, yes, I'll always be doing the 'SEO thing' even if I change careers or positions.",
+      "I thought I just told you I am currently the SEO manager at Patron Manager. But, yes, I'll always be doing the 'SEO thing' even if I change careers or positions.",
   },
   {
     question:
-      "You did say that. It's just that you talk about Next.js a lot. What's your deal?",
+      "You did say that, but you talk about Next.js a lot. What's your deal?",
     answer:
-      "My deal? This is such a weird interview... Next.js makes developing web applications simple for me. I think that Vercel has a good thing going and Next.js allows self-taught developers like me to move faster.",
+      "My deal? This is such a weird interview... Next.js makes developing web applications simple for me. Vercel has a good thing going, and Next.js allows self-taught developers like me to move faster.",
   },
   {
-    question: "What other tools do you like building web apps with?",
+    question: "So you're masquerading as a developer even though you're a marketer?",
     answer:
-      "I love the Jamstack and building with modern web technologies. So I use tools with positive developer experience (DX) like React, Next.js, TypeScript, Tailwind CSS, Vercel, Prisma, PostgreSQL, and Stripe.",
+      "Wow, um...no? My imposter syndrome thanks you for that question, but I literally built this website, so that should count for something, right?",
+  },
+  {
+    question:
+      "Hmmm, that's fair. Here's a softball: what other dev tools do you like building with?",
+    answer:
+      "I love the Jamstack and building with modern web technologies. So I use tools with a positive developer experience (DX) like Next.js, TypeScript, Tailwind CSS, Vercel, Prisma, Railway, PlanetScale, and Stripe.",
   },
   {
     question: "Are you actually going to post articles consistently this year?",
     answer:
-      "That's a pretty shady question, especially considering this is an interview with myself. But, yea, let's hope I write a lot more content this year.",
+      "That's a pretty shady question, especially considering this is an interview with myself... but I do hope I write a lot more content this year.",
   },
 ];
 export default function AboutPage() {
   return (
     <Container as="section" className="py-24">
-      <H1Heading className="mb-4 animate-in slide-in-from-left duration-1500">
+      <H1Heading className="mb-4 animate-in slide-in-from-left duration-500">
         Hey, I'm Ekom.
       </H1Heading>
-      <h2 className="h0 font-semibold animate-in slide-in-from-right duration-1500">
+      <h2 className="h0 font-semibold animate-in slide-in-from-right duration-500">
         Nice to meet you 🤝🏾
       </h2>
-      <div className="prose prose-lg mt-16 max-w-prose text-dark animate-in slide-in-from-bottom duration-1500 md:prose-2xl">
+      <div className="prose prose-lg mt-16 max-w-prose text-dark animate-in slide-in-from-bottom duration-500 md:prose-2xl">
         <p className="lead font-medium">
-          I find writing bios or content for "About me" pages to be a really awkward
-          process. So I thought me interviewing myself might be a less painful
-          experience for everyone involved.
+          Writing bios or content for "About me" pages is always awkward. So I
+          decided that interviewing myself might be a little less painful experience
+          for everyone involved. Read on below.
         </p>
         <AboutFAQs faqs={faqs} />
         <hr className="my-10 w-10 border border-dark" />
         <p>
           I am currently taking on speaking engagements, web design, and Next.js
-          development projects! If you want to reach out to collaborate or for the
-          aforementioned or any other reason, I'd love to hear from you!
+          development projects! If you want to reach out to collaborate for those
+          mentioned above or for any other reason, I'd love to hear from you!
         </p>
         <div className="flex flex-row space-x-4">
           <span>↳</span>

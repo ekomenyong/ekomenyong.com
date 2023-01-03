@@ -9,28 +9,8 @@
             <link>https://ekomenyong.com</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 02 Jan 2023 05:26:46 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 03 Jan 2023 02:30:34 GMT</lastBuildDate>
         <atom:link href="https://ekomenyong.com/feed.xml" rel="self" type="application/rss+xml"/>
-        <item>
-            <title><![CDATA[Building an Organic Search Landing Page that Converts at 74%]]></title>
-            <description><![CDATA[This summary has the word carrots]]></description>
-            <link>https://ekomenyong.com/insights/posts/this-is-a-test-post</link>
-            <guid isPermaLink="true">https://ekomenyong.com/insights/posts/this-is-a-test-post</guid>
-            <category><![CDATA[seo]]></category>
-            <category><![CDATA[landing page]]></category>
-            <category><![CDATA[cro]]></category>
-            <pubDate>Fri, 30 Dec 2022 05:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Guide to SEO for Jamstack Developers, by a Professional SEO]]></title>
-            <description><![CDATA[Whether you're building a Jamstack website or not, this SEO guide will give developers a foundation of SEO goals and best practices.]]></description>
-            <link>https://ekomenyong.com/insights/posts/seo-guide-jamstack-react-development</link>
-            <guid isPermaLink="true">https://ekomenyong.com/insights/posts/seo-guide-jamstack-react-development</guid>
-            <category><![CDATA[seo]]></category>
-            <category><![CDATA[jamstack]]></category>
-            <category><![CDATA[development]]></category>
-            <pubDate>Tue, 03 Jan 2023 05:00:00 GMT</pubDate>
-        </item>
         <item>
             <title><![CDATA[An SEO's Guide to Looker (Google Data) Studio Calculated Fields]]></title>
             <description><![CDATA[Learn how to create new fields in Looker Studio, formerly Google Data Studio, using calculated fields for Google Analytics 4 data.]]></description>
@@ -42,14 +22,34 @@
             <pubDate>Mon, 02 Jan 2023 05:00:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Build a Website from Scratch with Next.js 13 and Sanity Studio v3]]></title>
-            <description><![CDATA[Sanity Studio v3 brings a new experience to building and managing websites. Learn how to build a website from scratch with my favorite headless cms!]]></description>
-            <link>https://ekomenyong.com/insights/posts/nextjs-sanity-tailwind-series/part-1</link>
-            <guid isPermaLink="true">https://ekomenyong.com/insights/posts/nextjs-sanity-tailwind-series/part-1</guid>
-            <category><![CDATA[next.js]]></category>
-            <category><![CDATA[sanity]]></category>
-            <category><![CDATA[tutorial]]></category>
-            <pubDate>Mon, 09 Jan 2023 05:00:00 GMT</pubDate>
+            <title><![CDATA[My 2023 Blog Redesign: Next.js 13, TypeScript, & Contentlayer]]></title>
+            <description><![CDATA[I redesign my blog about once a year to update it with a new coat of paint. Check out some of the ways I use Next.js 13!]]></description>
+            <link>https://ekomenyong.com/insights/posts/redesign-next-js-13-blog-contentlayer-typescript</link>
+            <guid isPermaLink="true">https://ekomenyong.com/insights/posts/redesign-next-js-13-blog-contentlayer-typescript</guid>
+            <category><![CDATA[Next.js]]></category>
+            <category><![CDATA[Contentlayer]]></category>
+            <category><![CDATA[MDX]]></category>
+            <pubDate>Sun, 01 Jan 2023 05:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[How to Setup a Free PostgreSQL database on Railway]]></title>
+            <description><![CDATA[A year ago, I discovered Railway, an app infrastructure platform. Learn how to set up a free PostgreSQL database for your next project.]]></description>
+            <link>https://ekomenyong.com/insights/posts/how-to-setup-free-postgresql-database-on-railway-app</link>
+            <guid isPermaLink="true">https://ekomenyong.com/insights/posts/how-to-setup-free-postgresql-database-on-railway-app</guid>
+            <category><![CDATA[Railway]]></category>
+            <category><![CDATA[PostgreSQL]]></category>
+            <category><![CDATA[Heroku]]></category>
+            <pubDate>Sun, 21 Mar 2021 04:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Guide to SEO for Jamstack Developers, by a Professional SEO]]></title>
+            <description><![CDATA[Whether you're building a Jamstack website or not, this SEO guide will give developers a foundation of SEO goals and best practices.]]></description>
+            <link>https://ekomenyong.com/insights/posts/seo-guide-jamstack-react-development</link>
+            <guid isPermaLink="true">https://ekomenyong.com/insights/posts/seo-guide-jamstack-react-development</guid>
+            <category><![CDATA[seo]]></category>
+            <category><![CDATA[jamstack]]></category>
+            <category><![CDATA[development]]></category>
+            <pubDate>Mon, 16 Jan 2023 05:00:00 GMT</pubDate>
         </item>
     </channel>
 </rss>

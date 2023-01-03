@@ -1,8 +1,8 @@
-import { clsxm } from "@/utils";
-import { HTMLAttributes, ReactNode } from "react";
+import { clsxm } from "utils";
+import React from "react";
 
-interface ICallout extends HTMLAttributes<HTMLDivElement> {
-  children: ReactNode;
+interface ICallout extends React.HTMLAttributes<HTMLDivElement> {
+  children: React.ReactNode;
   className?: string;
 }
 

@@ -1,4 +1,4 @@
-import { Container, H1Heading, KommyLink, AboutFAQs } from "components";
+import { AboutFAQs, Container, H1Heading, KommyLink } from "components";
 const faqs = [
   {
     question: "Tell me about yourself.",
@@ -25,7 +25,7 @@ const faqs = [
   {
     question: "So are you not doing the whole SEO thing anymore?",
     answer:
-      "I thought I just told you I am currently the SEO manager at Patron Manager. But, yes, I'll always be doing the 'SEO thing' even if I change careers or positions.",
+      "I thought I just told you I am currently the SEO manager at Patron Technology. But, yes, I'll always be doing the 'SEO thing' even if I change careers or positions.",
   },
   {
     question:

@@ -1,6 +1,5 @@
-const siteUrl = process.env.NEXT_PUBLIC_APP_URL;
 module.exports = {
-  siteUrl,
+  siteUrl: "https://ekomenyong.com",
   exclude: ["/404", "/insights/seo-guide-jamstack-react-development"],
   generateRobotsTxt: true,
   robotsTxtOptions: {

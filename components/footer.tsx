@@ -23,9 +23,9 @@ export default function Footer() {
             ))}
           </div>
         )}
-        <div className="mt-8 flex flex-row flex-nowrap items-center justify-center font-medium md:order-1 md:mt-0 md:justify-start">
+        <div className="mt-8 flex flex-col items-center justify-center font-medium md:order-1 md:mt-0 md:flex-row md:flex-nowrap md:justify-start">
           <Logo textSize="text-base font-medium" />
-          <p className="ml-2">
+          <p className="ml-0 mt-4 md:mt-0 md:ml-2">
             &copy; 2023 &mdash;{" "}
             <KommyLink
               dottedLine

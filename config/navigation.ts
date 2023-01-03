@@ -12,9 +12,9 @@ export const navigation: TNavItems = {
     },
   ],
   footerNav: [
-    { title: "Twitter", href: "#" },
-    { title: "LinkedIn", href: "#" },
-    { title: "Github", href: "#" },
-    { title: "Email", href: "#" },
+    { title: "Twitter", href: "https://twtiter.com/EkomEnyong" },
+    { title: "LinkedIn", href: "https://linkedin.com/in/ekomenyong" },
+    { title: "Github", href: "https://github.com/ekomenyong" },
+    { title: "Email", href: "mailto:hello@ekomenyong.com" },
   ],
 };

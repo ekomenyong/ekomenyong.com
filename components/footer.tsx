@@ -1,5 +1,5 @@
+import { Container, KommyLink, Logo } from "components";
 import { navigation } from "config";
-import { KommyLink, Container, Logo } from "components";
 const nav = navigation.footerNav;
 export default function Footer() {
   return (

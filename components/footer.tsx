@@ -25,7 +25,17 @@ export default function Footer() {
         )}
         <div className="mt-8 flex flex-row flex-nowrap items-center justify-center font-medium md:order-1 md:mt-0 md:justify-start">
           <Logo textSize="text-base font-medium" />
-          <p className="ml-2">&copy; 2023 &mdash; Design and development by me.</p>
+          <p className="ml-2">
+            &copy; 2023 &mdash;{" "}
+            <KommyLink
+              dottedLine
+              animatedUnderline
+              href="https://github.com/ekomenyong/ekomenyong.com"
+            >
+              Design and development by me
+            </KommyLink>
+            .
+          </p>
         </div>
       </Container>
     </Container>

@@ -1,15 +1,15 @@
-import { readFileSync } from "fs";
-import readingTime from "reading-time";
 import {
   ComputedFields,
   defineDocumentType,
   makeSource,
 } from "contentlayer/source-files";
-import remarkGfm from "remark-gfm";
+import { readFileSync } from "fs";
+import readingTime from "reading-time";
+import { rehypeAccessibleEmojis } from "rehype-accessible-emojis";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
-import rehypeAutolinkHeadings from "rehype-autolink-headings";
-import { rehypeAccessibleEmojis } from "rehype-accessible-emojis";
+import remarkGfm from "remark-gfm";
 
 const computedFields: ComputedFields = {
   readingTime: { type: "json", resolve: (doc) => readingTime(doc.body.raw) },

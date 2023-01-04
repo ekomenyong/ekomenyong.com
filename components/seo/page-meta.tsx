@@ -5,7 +5,7 @@ interface IPageMeta {
   slug: string;
 }
 
-const url: string = process.env.NEXT_APP_PUBLIC_URL! || "http://localhost:3000";
+const url: string = "https://ekomenyong.com";
 
 export default function PageMeta({ title, description, slug }: IPageMeta) {
   return (

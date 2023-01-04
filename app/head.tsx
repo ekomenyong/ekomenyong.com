@@ -18,14 +18,14 @@ export default function Head() {
       />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://ekomenyong.com/" />
-      <meta property="og:image" content="/og.jpg" />
+      <meta property="og:image" content="https://ekomenyong.com/og.jpg" />
       <meta
         name="twitter:title"
         content="Ekom Enyong » Creating Digital Strategies & Web Experiences"
       />
       <meta name="twitter:card" content="summary_large_card" />
       <meta name="twitter:site" content="@ekomenyong" />
-      <meta name="twitter:image" content="/og.jpg" />
+      <meta name="twitter:image" content="https://ekomenyong.com/og.jpg" />
       <meta name="robots" content="index, follow" />
       <link rel="icon" href="/favicons/favicon.ico" />
       <link

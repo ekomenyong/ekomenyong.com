@@ -1,14 +1,15 @@
-import { notFound } from "next/navigation";
-import { allAuthors, allPosts } from "contentlayer/generated";
+import "./mdx.css";
+
 import {
-  TableOfContents,
-  Container,
   BlogHeader,
+  Container,
+  KommyImage,
   KommyLink,
   MDXComponents,
-  KommyImage,
+  TableOfContents,
 } from "components";
-import "./mdx.css";
+import { allAuthors, allPosts } from "contentlayer/generated";
+import { notFound } from "next/navigation";
 import { formatDate, shimmer, toBase64 } from "utils";
 
 interface ISingleBlogPost {

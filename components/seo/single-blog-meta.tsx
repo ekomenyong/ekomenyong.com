@@ -28,7 +28,7 @@ export default function SingleBlogMeta({ params }: ISingleBlogMeta) {
       <meta property="og:url" content={`${url}/insights/${post.slugAsParams}`} />
       <meta
         property="og:image"
-        content={`${url}post.og_image` || post.cover_image}
+        content={`${url}+ ${post.og_image}` || post.cover_image}
       />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:card" content="summary_large_card" />
@@ -36,7 +36,7 @@ export default function SingleBlogMeta({ params }: ISingleBlogMeta) {
       <meta name="twitter:description" content={post.description} />
       <meta
         name="twitter:image"
-        content={`${url}post.og_image` || post.cover_image}
+        content={`${url}+ ${post.og_image}` || post.cover_image}
       />
       <meta name="robots" content="index, follow" />
       <link rel="icon" href="https://ekomenyong.com/favicons/favicon.ico" />

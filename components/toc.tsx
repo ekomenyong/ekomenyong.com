@@ -119,9 +119,9 @@ const TableOfContents = ({ source }: TOCProps) => {
                     key={index}
                     href={`#${heading.id}`}
                     className={clsxm(
-                      heading.id === activeId ? "font-medium" : "font-normal",
+                      heading.id === activeId ? "font-bold" : "font-normal",
                       heading.level === 2 ? "pl-2" : "pl-6",
-                      "mb-4 text-base text-gray-700 last:mb-6 hover:underline"
+                      "mb-4 text-base text-slate-700 last:mb-6 hover:underline"
                     )}
                     onClick={(e) => {
                       e.preventDefault();

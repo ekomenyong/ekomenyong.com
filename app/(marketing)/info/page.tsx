@@ -56,7 +56,7 @@ export default function AboutPage() {
       <H1Heading className="mb-4 animate-in slide-in-from-left duration-500">
         Hey, I'm Ekom.
       </H1Heading>
-      <h2 className="h0 font-semibold animate-in slide-in-from-right duration-500">
+      <h2 className="h0 font-bold animate-in slide-in-from-right duration-500">
         Nice to meet you 🤝🏾
       </h2>
       <div className="prose prose-lg mt-16 max-w-prose text-dark animate-in slide-in-from-bottom duration-500 md:prose-2xl">

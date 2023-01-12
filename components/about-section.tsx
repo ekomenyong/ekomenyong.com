@@ -3,7 +3,7 @@ import Container from "./container";
 export default function AboutSection() {
   return (
     <Container as="section">
-      <h2 className="mt-20 mb-6 max-w-5xl leading-8 lg:leading-10">
+      <h2 className="mt-20 mb-6 max-w-5xl font-bold leading-8 lg:leading-10">
         An SEO Manager who has spent the last 10 years helping brands increase leads
         and organic traffic through digital strategy and high-quality content.
       </h2>

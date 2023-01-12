@@ -6,23 +6,43 @@ import { Analytics, TailwindIndicator } from "components";
 const neueMontreal = localFont({
   src: [
     {
-      path: "../assets/fonts/NeueMontreal-Regular.woff2",
+      path: "../assets/fonts/PPNeueMontreal-Regular.woff2",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../assets/fonts/NeueMontreal-Italic.woff2",
+      path: "../assets/fonts/PPNeueMontreal-Italic.woff2",
       weight: "400",
       style: "italic",
     },
     {
-      path: "../assets/fonts/NeueMontreal-Medium.woff2",
+      path: "../assets/fonts/PPNeueMontreal-Medium.woff2",
       weight: "500",
       style: "normal",
     },
     {
-      path: "../assets/fonts/NeueMontreal-MediumItalic.woff2",
+      path: "../assets/fonts/PPNeueMontreal-MediumItalic.woff2",
       weight: "500",
+      style: "italic",
+    },
+    {
+      path: "../assets/fonts/PPNeueMontreal-Semibold.woff2",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../assets/fonts/PPNeueMontreal-SemiboldItalic.woff2",
+      weight: "700",
+      style: "italic",
+    },
+    {
+      path: "../assets/fonts/PPNeueMontreal-Bold.woff2",
+      weight: "800",
+      style: "normal",
+    },
+    {
+      path: "../assets/fonts/PPNeueMontreal-BoldItalic.woff2",
+      weight: "800",
       style: "italic",
     },
   ],

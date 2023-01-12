@@ -38,7 +38,7 @@ export default function BlogSection({ posts }: { posts: Post[] }) {
                   <div className="flex h-80 flex-col items-start justify-between p-4">
                     <div className="flex flex-col">
                       <span className="text-sm italic">{formatDate(p.date)}</span>
-                      <h2 className="h3 mt-1 inline font-semibold leading-8">
+                      <h2 className="h3 mt-1 inline font-bold leading-8">
                         {p.title}
                       </h2>
                     </div>
@@ -51,7 +51,7 @@ export default function BlogSection({ posts }: { posts: Post[] }) {
                           {p.tags.map((t, index) => (
                             <span
                               key={index}
-                              className="inline-flex text-xs font-normal uppercase tracking-wide before:content-['#'] after:ml-1 after:content-['•'] last:after:content-none"
+                              className="inline-flex text-xs font-normal uppercase tracking-wider before:content-['#'] after:ml-1 after:content-['•'] last:after:content-none"
                             >
                               {t}
                             </span>

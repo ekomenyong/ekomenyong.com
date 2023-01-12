@@ -75,9 +75,13 @@ While I have dropped my large, all-caps headings, I still feel my website repres
 
 Last year when I redesigned my website, I used [`rehype-prism-plus`](https://github.com/timlrx/rehype-prism-plus). This year I discovered [`rehype-pretty-code`](https://rehype-pretty-code.netlify.app/) and implemented [Railly Hugo's One Hunter Vercel Theme](https://marketplace.visualstudio.com/items?itemName=RaillyHugo.one-hunter) with a custom background.
 
-I still have a custom `Pre` component that allows readers to copy a code block to their clipboard. Try it out by hovering over the code block below.
+One of my favorite features of rehype-pretty-code is that you can highlight inline code like so: `const age = 25 {:js}`.
 
-```tsx {9-16} showLineNumbers title="components/emoji.tsx"
+I still have a custom `Pre` component that allows readers to copy a code block to their clipboard, which you can try out below!
+
+<CodeTitle title="components/emoji.tsx" lang="tsx" />
+
+```tsx {9-16} showLineNumbers
 // You can copy this code block
 interface EmojiProps {
   label?: string;
@@ -102,11 +106,12 @@ export default function Emoji({ label, emoji, ...props }: EmojiProps) {
 
 To be able to create usable components without style conflicts, I am using [`clsx`](https://github.com/lukeed/clsx) and [`tailwind-merge`](https://github.com/dcastil/tailwind-merge). You can do the same with your Tailwind CSS projects by creating a function as follows:
 
-```ts title="./utils/clsxm.ts"
+<CodeTitle title="utils/clsxm.ts" lang="ts" />
+
+```ts
 import clsx, { ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
-
-/** Merge classes with tailwind-merge with clsx full feature */
+// Merge classes with tailwind-merge with clsx full feature
 export function clsxm(...classes: ClassValue[]) {
   return twMerge(clsx(...classes));
 }
@@ -116,10 +121,9 @@ export function clsxm(...classes: ClassValue[]) {
 
 This year, I created a custom skeleton component. This is useful when you want to show a user that data is not yet available but loading. I wrote this component out as :
 
-```tsx title="./components/skeleton.tsx"
-import React from "react";
-import { clsxm } from "utils";
+<CodeTitle title="components/skeleton.tsx" lang="tsx" />
 
+```tsx import React from "react"; import {clsxm} from "utils";
 interface ISkeleton extends React.HTMLAttributes<HTMLDivElement> {}
 
 export default function Skeleton({ className, ...props }: ISkeleton) {

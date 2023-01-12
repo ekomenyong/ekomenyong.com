@@ -4,7 +4,10 @@
   box-decoration-break: clone;
 }
 [data-rehype-pretty-code-fragment] .line {
-  @apply px-4 py-1;
+  @apply w-fit rounded bg-slate-900 py-[0.2rem] px-[0.3rem] text-base;
+}
+p > [data-rehype-pretty-code-fragment] {
+  @apply inline-block;
 }
 [data-rehype-pretty-code-fragment] [data-line-numbers] > .line::before {
   counter-increment: line;
@@ -28,5 +31,8 @@
   @apply mt-4 rounded-md rounded-b-none bg-gray-200 py-2 px-4 font-mono text-sm;
 }
 [data-rehype-pretty-code-title] ~ div > pre.pre {
+  @apply mt-0 rounded-t-none;
+}
+div.code-title ~ [data-rehype-pretty-code-fragment] > div > pre.pre {
   @apply mt-0 rounded-t-none;
 }

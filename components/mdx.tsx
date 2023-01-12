@@ -1,12 +1,12 @@
 import { useMDXComponent } from "next-contentlayer/hooks";
-import { Callout, KommyImage, KommyLink, Pre } from "components";
+import { Callout, CodeTitle, KommyImage, KommyLink, Pre } from "components";
 import { clsxm } from "utils";
 import React from "react";
 
 const components = {
   Callout,
+  CodeTitle,
   KommyImage,
-  pre: Pre,
   KommyLink,
   a: ({ ...props }: React.HTMLAttributes<HTMLAnchorElement>) => (
     <a
@@ -65,6 +65,7 @@ const components = {
       {...props}
     />
   ),
+  pre: Pre,
 };
 
 interface IMDXComponents {

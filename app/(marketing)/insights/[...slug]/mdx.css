@@ -19,7 +19,7 @@ p > [data-rehype-pretty-code-fragment] {
   color: gray;
 }
 [data-rehype-pretty-code-fragment] .line--highlighted {
-  @apply border-l-4 border-brand bg-gray-300 bg-opacity-10;
+  @apply rounded-none border-l-4 border-brand bg-gray-300 bg-opacity-10;
 }
 [data-rehype-pretty-code-fragment] .line-highlighted span {
   @apply relative;

@@ -31,7 +31,7 @@ const neueMontreal = localFont({
       style: "normal",
     },
     {
-      path: "../assets/fonts/PPNeueMontreal-SemiboldItalic.woff2",
+      path: "../assets/fonts/PPNeueMontreal-SemiBoldItalic.woff2",
       weight: "700",
       style: "italic",
     },

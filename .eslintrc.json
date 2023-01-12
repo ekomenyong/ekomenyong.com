@@ -1,8 +1,6 @@
 {
   "extends": ["next/core-web-vitals"],
   "rules": {
-    "simple-import-sort/imports": "warn",
-    "simple-import-sort/exports": "warn",
     "react/no-unescaped-entities": "warn"
   }
 }

@@ -1,5 +1,4 @@
 import "./mdx.css";
-
 import {
   BlogHeader,
   Container,
@@ -7,10 +6,10 @@ import {
   KommyLink,
   MDXComponents,
   TableOfContents,
-} from "components";
+} from "@/components";
+import { formatDate, shimmer, toBase64 } from "@/utils";
 import { allAuthors, allPosts } from "contentlayer/generated";
 import { notFound } from "next/navigation";
-import { formatDate, shimmer, toBase64 } from "utils";
 
 interface ISingleBlogPost {
   params: {

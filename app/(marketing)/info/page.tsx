@@ -1,4 +1,5 @@
-import { AboutFAQs, Container, H1Heading, KommyLink } from "components";
+import { AboutFAQs, Container, H1Heading, KommyLink } from "@/components";
+
 const faqs = [
   {
     question: "Tell me about yourself.",

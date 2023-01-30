@@ -19,11 +19,13 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.7.7",
+    "@ianvs/prettier-plugin-sort-imports": "^3.7.1",
     "@next/font": "^13.1.1",
     "@vercel/analytics": "^0.1.6",
     "clsx": "^1.2.1",
     "contentlayer": "^0.2.9",
     "date-fns": "^2.29.3",
+    "eslint-plugin-tailwindcss": "^3.8.2",
     "github-slugger": "^2.0.0",
     "next": "latest",
     "next-compose-plugins": "^2.2.1",

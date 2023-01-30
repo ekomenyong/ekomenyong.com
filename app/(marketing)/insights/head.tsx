@@ -1,4 +1,4 @@
-import { PageMeta } from "components";
+import { PageMeta } from "@/components";
 
 export default function InsightsIndexHead() {
   return (

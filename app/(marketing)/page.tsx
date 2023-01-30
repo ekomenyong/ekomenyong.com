@@ -1,4 +1,4 @@
-import { AboutSection, BlogSection, Container, H1Heading } from "components";
+import { AboutSection, BlogSection, Container, H1Heading } from "@/components";
 import { allPosts } from "contentlayer/generated";
 import { compareDesc } from "date-fns";
 

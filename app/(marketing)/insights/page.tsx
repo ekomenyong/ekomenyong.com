@@ -1,8 +1,9 @@
 "use client";
-import { useState } from "react";
-import { BlogSection, Container, H1Heading } from "components";
+
+import { BlogSection, Container, H1Heading } from "@/components";
 import { allPosts } from "contentlayer/generated";
 import { compareDesc } from "date-fns";
+import { useState } from "react";
 
 export default function BlogIndexPage() {
   const [searchValue, setSearchValue] = useState("");

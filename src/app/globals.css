@@ -1,0 +1,193 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0, 0%, 96%;
+    --foreground: 251 71% 5%;
+    --muted: 251 36% 93%;
+    --muted-foreground: 251 3% 35%;
+    --popover: 251 51% 99%;
+    --popover-foreground: 251 71% 5%;
+    --card: 251 51% 98%;
+    --card-foreground: 251 71% 4%;
+    --border: 251 4% 89%;
+    --input: 251 4% 89%;
+    --primary: 251 17% 10%;
+    --primary-foreground: 251 68.38% 97.57%;
+    --secondary: 251 20% 87%;
+    --secondary-foreground: 251 20% 27%;
+    --accent: 251 20% 87%;
+    --accent-foreground: 251 20% 27%;
+    --destructive: 5 100% 43%;
+    --destructive-foreground: 0 0% 100%;
+    --ring: 251 17% 10%;
+    --radius: 0.5rem;
+    /* Sugar High */
+    --sh-class: #0f89e6;
+    --sh-identifier: #354150;
+    --sh-sign: #8996a3;
+    --sh-property: #0550ae;
+    --sh-entity: #249a97;
+    --sh-jsxliterals: #6266d1;
+    --sh-string: #00a99a;
+    --sh-keyword: #ff0096;
+    --sh-comment: #a19595;
+  }
+
+  .dark {
+    --background: 251 41% 1%;
+    --foreground: 251 17% 98%;
+    --muted: 251 36% 7%;
+    --muted-foreground: 251 3% 65%;
+    --popover: 251 41% 1%;
+    --popover-foreground: 251 17% 98%;
+    --card: 251 41% 2%;
+    --card-foreground: 251 17% 99%;
+    --border: 251 4% 11%;
+    --input: 251 4% 11%;
+    --primary: 251 17% 10%;
+    --primary-foreground: 251 17% 70%;
+    --secondary: 251 10% 14%;
+    --secondary-foreground: 251 10% 74%;
+    --accent: 251 10% 14%;
+    --accent-foreground: 251 10% 74%;
+    --destructive: 5 100% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --ring: 251 17% 10%;
+    /* Sugar High */
+    --sh-class: #0f89e6;
+    --sh-identifier: white;
+    --sh-keyword: #ff0096;
+    --sh-string: #0fa295;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  *,
+  *:before,
+  *:after {
+    @apply cursor-default;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  a {
+    @apply cursor-pointer;
+  }
+
+  pre::-webkit-scrollbar {
+    display: none;
+  }
+  pre {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  /* Remove Safari input shadow on mobile */
+  input[type="text"],
+  input[type="email"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  table {
+    display: block;
+    max-width: fit-content;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .prose .anchor {
+    @apply invisible absolute no-underline;
+    margin-left: -1em;
+    padding-right: 0.5em;
+    width: 80%;
+    max-width: 700px;
+    cursor: pointer;
+  }
+
+  .anchor:hover {
+    @apply visible;
+  }
+
+  .prose a {
+    @apply underline decoration-neutral-400 decoration-[0.1em] underline-offset-2 transition-all hover:text-brand hover:decoration-brand dark:decoration-neutral-600;
+  }
+
+  .prose .anchor:after {
+    @apply text-neutral-400 dark:text-neutral-800;
+    content: "#";
+  }
+
+  .prose *:hover > .anchor {
+    @apply visible;
+  }
+
+  .prose pre {
+    @apply overflow-x-auto rounded-lg border border-neutral-200 bg-neutral-50 px-3 py-2 text-sm dark:border-neutral-900 dark:bg-neutral-900;
+  }
+
+  .prose code {
+    @apply rounded-lg px-1 py-0.5;
+  }
+
+  .prose pre code {
+    @apply p-0;
+    border: initial;
+    line-height: 1.5;
+  }
+
+  .prose code span {
+    @apply font-medium;
+  }
+
+  .prose img {
+    /* Don't apply styles to next/image */
+    @apply m-0 h-auto w-full rounded-lg object-cover;
+  }
+
+  .prose p {
+    @apply my-4 text-black dark:text-neutral-200;
+  }
+
+  .prose h1 {
+    @apply mb-2 mt-6 text-4xl font-medium tracking-tight;
+  }
+
+  .prose h2 {
+    @apply mb-2 mt-6 scroll-mt-32 text-2xl font-semibold tracking-tight;
+  }
+
+  .prose h3 {
+    @apply mb-2 mt-6 scroll-mt-32 text-xl font-medium tracking-tight;
+  }
+
+  .prose h4 {
+    @apply mb-2 mt-6 scroll-mt-32 text-lg font-medium tracking-tight;
+  }
+
+  .prose strong {
+    @apply font-medium;
+  }
+
+  .prose ul {
+    @apply list-disc pl-6;
+  }
+
+  .prose ol {
+    @apply list-decimal pl-6;
+  }
+
+  .prose > :first-child {
+    /* Override removing top margin, causing layout shift */
+    margin-top: 1.25em !important;
+    margin-bottom: 1.25em !important;
+  }
+}

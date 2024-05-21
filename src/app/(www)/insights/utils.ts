@@ -48,9 +48,7 @@ function getMDXData(dir: string) {
   let mdxFiles = getMDXFiles(dir);
   return mdxFiles.map((file) => {
     let { metadata, content } = readMDXFile(path.join(dir, file));
-    let slug = path
-      .basename(file, path.extname(file))
-      .replace(/(\d{4})-(\d{2})-(\d{2})-/g, "");
+    let slug = path.basename(file, path.extname(file)).replace(/(\d{4})-(\d{2})-(\d{2})-/g, "");
 
     return {
       metadata,
@@ -61,9 +59,7 @@ function getMDXData(dir: string) {
 }
 
 export function getBlogPosts() {
-  return getMDXData(
-    path.join(process.cwd(), "src", "app", "(www)", "insights", "content"),
-  );
+  return getMDXData(path.join(process.cwd(), "src", "content"));
 }
 
 export function formatDate(date: string, includeRelative = false) {

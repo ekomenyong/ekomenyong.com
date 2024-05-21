@@ -47,9 +47,7 @@ const HomeHero = (props: HomeHeroProps) => {
         {cta && (
           <Link
             href={ctaHref as string}
-            className="text-2xl font-medium underline underline-offset-2 after:ml-0 after:content-['_↗'] hover:text-brand"
-            target="_blank"
-            rel="noopener noreferrer">
+            className="text-2xl font-medium underline underline-offset-2 after:ml-0 after:content-['_↗'] hover:text-brand">
             {ctaText}
           </Link>
         )}

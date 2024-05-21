@@ -9,10 +9,10 @@ export default async function Home() {
     <>
       <HomeHero
         badge
-        badgeHref="https://hey.new/ekom"
+        badgeHref="/contact"
         badgeMessage="Limited Availability Q3/24"
         cta
-        ctaHref="https://hey.new/ekom"
+        ctaHref="/contact"
         ctaText="Let's connect"
         heroTitle="Ekom Enyong"
         heroText="I'm an organic search (SEO) professional with a career spanning over 10 years crafting search strategies, optimizing digital experiences, and generating leads."

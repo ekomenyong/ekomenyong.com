@@ -57,7 +57,7 @@ const SiteHeader = () => {
         </div>
         <div className="hidden pr-4 md:inline-flex">
           <Button asChild className="rounded-full text-base dark:text-white">
-            <Link href="https://hey.new/ekom">Let&apos;s connect</Link>
+            <Link href="/contact">Let&apos;s connect</Link>
           </Button>
         </div>
         <div className="inline-flex md:hidden">
@@ -141,7 +141,7 @@ const navLinks = {
     },
     {
       title: "Let's connect",
-      href: "https://hey.new/ekom",
+      href: "/contact",
     },
   ],
   socialLinks: [

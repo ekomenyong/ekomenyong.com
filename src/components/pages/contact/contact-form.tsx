@@ -7,52 +7,56 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 
 import { Button } from "~/components/ui/button";
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "~/components/ui/form";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "~/components/ui/form";
 import { Input } from "~/components/ui/input";
 import { Textarea } from "~/components/ui/textarea";
 
 export function ContactForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const formSchema = z.object({
-    name: z.string().min(2).max(50),
+    fullName: z.string().min(1, { message: "Your name is required." }).max(50),
     email: z.string().email(),
-    message: z.string().min(2).max(3000),
+    message: z.string().min(10, { message: "You are required to write a message." }).max(3000),
   });
   // define form
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      name: "",
+      fullName: "",
       email: "",
       message: "",
     },
   });
 
   // define a submit handler
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    await fetch("/api/send", {
+      method: "POST",
+      body: JSON.stringify({
+        fullName: values.fullName,
+        email: values.email,
+        message: values.message,
+      }),
+    });
+
     setIsSubmitted(true);
   }
 
   if (isSubmitted) {
-    return <div className="">Thank you for your message!</div>;
+    return (
+      <div className="mx-auto w-full space-y-8 rounded-xl bg-white p-8 shadow-md md:w-2/3">
+        Thank you for your message! I will get back to you as soon as possible!
+      </div>
+    );
   }
   return (
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="mx-auto w-2/3 space-y-8 rounded-xl bg-white p-8 shadow-md">
+        className="mx-auto w-full space-y-8 rounded-xl bg-white p-8 shadow-md md:w-2/3">
         <FormField
           control={form.control}
-          name="name"
+          name="fullName"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Name</FormLabel>
@@ -72,7 +76,6 @@ export function ContactForm() {
               <FormControl>
                 <Input placeholder="Enter your email" {...field} />
               </FormControl>
-              <FormDescription>This is your public display name.</FormDescription>
               <FormMessage />
             </FormItem>
           )}

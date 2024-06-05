@@ -20,7 +20,7 @@ export default function BlogIndexPage() {
             </div>
             {/* TODO: Add blog category filter */}
           </div>
-          <div className="flex w-full flex-col items-end gap-y-8 sm:w-[500px] lg:w-[580px]">
+          <div className="mt-8 flex w-full flex-col items-end gap-y-8 sm:w-[500px] md:mt-0 lg:w-[580px]">
             {allBlogs
               .sort((a, b) => {
                 if (new Date(a.metadata.publishedAt) > new Date(b.metadata.publishedAt)) {

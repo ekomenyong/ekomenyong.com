@@ -1,4 +1,5 @@
 import React from "react";
+
 import Link from "next/link";
 
 import Container from "./container";
@@ -30,7 +31,7 @@ const SiteFooter = () => {
             <p>
               Site design and development by:{" "}
               <Link
-                href="#"
+                href="https://github.com/ekomenyong"
                 className="font-medium underline underline-offset-2 hover:text-brand">
                 Ekom Enyong
               </Link>

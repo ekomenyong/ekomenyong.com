@@ -33,6 +33,10 @@ export function ContactForm() {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     await nodefetch("/api/send", {
       method: "POST",
+      headers: {
+        Authorization: `Bearer ${process.env.RESEND_SECRET}`,
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify({
         fullName: values.fullName,
         email: values.email,

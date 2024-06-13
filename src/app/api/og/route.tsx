@@ -21,7 +21,7 @@ export async function GET(req: NextRequest) {
           flexDirection: "column",
           alignItems: "flex-start",
           justifyContent: "center",
-          backgroundImage: "url(https://ekomenyong.com/assets/bg-og.webp)",
+          backgroundImage: "url(https://ekomenyong.com/assets/bg-og.jpg)",
         }}>
         <div
           style={{

@@ -26,7 +26,7 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   }
 
   let { title, publishedAt: publishedTime, summary: description, image } = post.metadata;
-  let ogImage = image ? image : `${baseUrl}/og?title=${encodeURIComponent(title)}`;
+  let ogImage = image ? image : `${baseUrl}/api/og?title=${encodeURIComponent(title)}`;
 
   return {
     title,

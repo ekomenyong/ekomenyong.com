@@ -14,11 +14,19 @@ const fontSans = FontSans({
 });
 
 export const metadata: Metadata = {
-  title: "Ekom Enyong",
-  description: "Next.js 14, Sanity, Radix UI Shadcn",
+  title: "Ekom Enyong | Organic Growth & SEO Professional",
+  description:
+    "Ekom Enyong is an organic search (SEO) professional with a career spanning over 10 years crafting search strategies, optimizing digital experiences, and generating leads.",
   icons: {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
+  },
+  openGraph: {
+    images: [
+      {
+        url: "https://ekomenyong.com/assets/home-og.jpg",
+      },
+    ],
   },
 };
 

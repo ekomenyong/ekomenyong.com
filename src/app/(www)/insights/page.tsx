@@ -1,9 +1,23 @@
 import React from "react";
 
+import { Metadata } from "next";
+
 import { formatDate, getBlogPosts, readingTime } from "~/app/(www)/insights/utils";
 import { Heading, HeadingEyebrow } from "~/components/atoms/heading";
 import PostCard from "~/components/blocks/post-card";
 import Container from "~/components/global/container";
+
+export const metadata: Metadata = {
+  title: "Blog | Ekom Enyong | Organic Growth & SEO Professional",
+  description: "Read the latest insights from Ekom Enyong, an organic growth and SEO professional.",
+  openGraph: {
+    images: [
+      {
+        url: "https://ekomenyong.com/assets/home-og.jpg",
+      },
+    ],
+  },
+};
 
 export default function BlogIndexPage() {
   const allBlogs = getBlogPosts();

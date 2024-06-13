@@ -31,8 +31,12 @@ export function ContactForm() {
 
   // define a submit handler
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    await nodefetch("https://ekomenyong.com/api/send", {
+    await nodefetch("/api/send", {
       method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
+      },
       body: JSON.stringify({
         fullName: values.fullName,
         email: values.email,

@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
-
-import { SpeedInsights } from "@vercel/speed-insights/next";
-import PlausibleProvider from "next-plausible";
+import Script from "next/script";
 
 import TailwindIndicator from "~/components/global/tailwind-indicator";
 import { cn } from "~/lib/utils";
@@ -38,16 +36,13 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning className="scroll-smooth">
-      <head>
-        <PlausibleProvider domain="ekomenyong.com" />
-      </head>
       <body className={cn("min-h-screen bg-background font-sans antialiased", fontSans.variable)}>
         <div className="relative flex flex-col">
           <main className="flex-1">{children}</main>
         </div>
         <TailwindIndicator />
-        <SpeedInsights />
       </body>
+      <Script defer data-domain="ekomenyong.com" src="/js/script.js" />
     </html>
   );
 }

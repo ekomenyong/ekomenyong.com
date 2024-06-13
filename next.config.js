@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const withBundleAnalyzer = require("@next/bundle-analyzer")();
+const { withPlausibleProxy } = require("next-plausible");
 const nextConfig = {
   reactStrictMode: true,
   async redirects() {
@@ -21,6 +22,19 @@ const nextConfig = {
       },
     ];
   },
+  async rewrites() {
+    return [
+      {
+        source: "/js/script.js",
+        destination: "https://plausible.io/js/script.js",
+      },
+      {
+        source: "/api/event", // Or '/api/event/' if you have `trailingSlash: true` in this config
+        destination: "https://plausible.io/api/event",
+      },
+    ];
+  },
 };
 
-module.exports = process.env.ANALYZE === "true" ? withBundleAnalyzer(nextConfig) : nextConfig;
+module.exports =
+  process.env.ANALYZE === "true" ? withPlausibleProxy(withBundleAnalyzer(nextConfig)) : nextConfig;

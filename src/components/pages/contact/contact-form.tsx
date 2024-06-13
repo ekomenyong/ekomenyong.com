@@ -3,7 +3,6 @@
 import { useState } from "react";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import nodefetch from "node-fetch";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
@@ -31,8 +30,11 @@ export function ContactForm() {
 
   // define a submit handler
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    await nodefetch("/api/send", {
+    await fetch("/api/send", {
       method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify({
         fullName: values.fullName,
         email: values.email,

@@ -20,7 +20,6 @@ const nextConfig = {
         destination: "/#info",
         permanent: true,
       },
-      { source: "/contact", destination: "/", permanent: false },
     ];
   },
   async rewrites() {

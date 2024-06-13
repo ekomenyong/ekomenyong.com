@@ -87,7 +87,7 @@ export function ContactForm() {
             <FormItem>
               <FormLabel>Message</FormLabel>
               <FormControl>
-                <Textarea placeholder="Your message here" {...field} />
+                <Textarea placeholder="Your message here" rows={8} {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>

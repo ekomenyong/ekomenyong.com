@@ -12,7 +12,7 @@ const HomeCapabilities = () => {
         </Heading>
         <div className="flex flex-wrap gap-4">
           {skills.map((skill) => (
-            <span key={skill} className="rounded-full border-2 border-black px-3 py-2 text-xl font-medium">
+            <span key={skill} className="rounded-full border-2 border-black px-3 py-2 text-lg font-medium">
               {skill}
             </span>
           ))}
@@ -25,14 +25,17 @@ const HomeCapabilities = () => {
 export default HomeCapabilities;
 
 const skills = [
-  "SEO Consulting",
-  "On-page Optimization",
-  "Content Strategy",
-  "Copywriting",
-  "SaaS SEO",
-  "SEO for PLG",
-  "Ecommerce SEO",
+  "SEO Strategy",
   "Technical SEO",
+  "Product-led Growth",
+  "Content Strategy",
   "Local SEO",
+  "Backlink Building",
   "Conversion Rate Optimization",
+  "On-page Optimization",
+  "Experimentation",
+  "Copywriting",
+  "Inbound Lead Generation",
+  "Performance Analysis",
+  "Reporting & Data Analysis",
 ];

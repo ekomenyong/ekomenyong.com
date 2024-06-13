@@ -14,7 +14,7 @@ export default function NotFound() {
         <div className="flex flex-col items-center justify-center">
           <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Ekom Enyong</span>
-            <Icons.logo className="h-24 w-auto text-foreground" />
+            <Icons.logo className="h-24 w-auto text-brand" />
           </Link>
           <div className="mt-8 flex max-w-2xl flex-col items-center text-center">
             <HeadingEyebrow className="uppercase" variant="gradient">

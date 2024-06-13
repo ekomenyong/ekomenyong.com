@@ -1,5 +1,7 @@
 import React from "react";
 
+import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { getBlogPosts } from "~/app/(www)/insights/utils";
@@ -7,6 +9,7 @@ import { baseUrl } from "~/app/sitemap";
 import Container from "~/components/global/container";
 import BlogArticleHeader from "~/components/pages/blog/blog-article-header";
 import { CustomMDX } from "~/components/pages/blog/mdx";
+import { Separator } from "~/components/ui/separator";
 
 export async function generateStaticParams() {
   let posts = getBlogPosts();
@@ -89,6 +92,25 @@ export default function BlogArticlePage({ params }: { params: { slug: string } }
 
       <Container as="article" className="prose max-w-2xl">
         <CustomMDX source={post.content} />
+      </Container>
+      <Container className="max-w-2xl">
+        <Separator className="mt-8 bg-neutral-500" />
+        <div className="mx-auto flex items-start gap-x-6 pt-8">
+          <Image
+            src="/assets/headshot.jpeg"
+            alt="Ekom Enyong headshot"
+            width={500}
+            height={500}
+            className="h-16 w-auto rounded-full"
+          />
+          <p className="text-sm italic">
+            <Link href="/" className="font-medium underline underline-offset-4 hover:text-brand">
+              Ekom Enyong
+            </Link>{" "}
+            is an organic search (SEO) professional with a career spanning over 10 years crafting search
+            strategies, optimizing digital experiences, and connecting brands with high-intent users.
+          </p>
+        </div>
       </Container>
     </Container>
   );

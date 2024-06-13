@@ -6,7 +6,7 @@ export const runtime = "edge";
 export async function GET(req: NextRequest) {
   const { searchParams } = req.nextUrl;
   const postTitle = searchParams.get("title");
-  const font = fetch(new URL("http://localhost:3000/fonts/Inter-Bold.ttf", import.meta.url)).then((res) =>
+  const font = fetch(new URL("https://ekomenyong.com/fonts/Inter-Bold.ttf", import.meta.url)).then((res) =>
     res.arrayBuffer()
   );
   const fontData = await font;

@@ -6,7 +6,7 @@ import Link, { LinkProps } from "next/link";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { highlight } from "sugar-high";
 
-import { Icons } from "~/components/global/icons";
+import { Separator } from "~/components/ui/separator";
 
 type CustomLinkProps = {} & Omit<LinkProps, "href"> & React.AnchorHTMLAttributes<HTMLAnchorElement>;
 
@@ -54,9 +54,10 @@ function RoundedImage(props: RoundedImageProps) {
   return <Image alt={props.altText} {...props} />;
 }
 
-function Code({ children, ...props }: { children: string }) {
+async function Code({ children, ...props }: { children: string }) {
   let codeHTML = highlight(children);
-  return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />;
+
+  return <code className="bg-white" dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />;
 }
 
 function slugify(str: string | React.ReactNode | null) {
@@ -94,14 +95,14 @@ function createHeading(level: number) {
   return Heading;
 }
 
-const Alert = ({ children, type }: { children: React.ReactNode; type: "warning" | "info" }): JSX.Element => (
-  <div className="text-tertiary mt-7 flex items-start gap-2 rounded-md border border-secondary p-4">
-    <div className="w-fit">
-      {type === "warning" ? <Icons.warning className="size-5" /> : <Icons.info className="size-5" />}
+function Callout({ emoji, children }: { emoji: string; children: React.ReactNode }) {
+  return (
+    <div className="mb-8 flex items-start rounded-md border-2 border-neutral-800 bg-white p-1 px-4 py-3 text-base">
+      <div className="mr-4 flex h-auto w-4 items-center text-base">{emoji}</div>
+      <div className="callout w-full">{children}</div>
     </div>
-    <div className="not-prose text-sm">{children}</div>
-  </div>
-);
+  );
+}
 
 let components = {
   h1: createHeading(1),
@@ -114,7 +115,8 @@ let components = {
   a: CustomLink,
   code: Code,
   Table,
-  Alert,
+  Separator,
+  Callout,
 };
 
 export function CustomMDX(props: any) {

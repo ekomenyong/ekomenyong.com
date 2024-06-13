@@ -1,6 +1,6 @@
 import * as React from "react";
 
-export interface ContactEmailTemplateProps {
+interface ContactEmailTemplateProps {
   fullName: string;
   email: string;
   message: string;
@@ -17,6 +17,7 @@ export const ContactEmailTemplate: React.FC<Readonly<ContactEmailTemplateProps>>
       You have a new message from {fullName} ({email})!
     </p>
 
-    <p>Message: {message}</p>
+    <h2>Message:</h2>
+    <p>{message}</p>
   </div>
 );

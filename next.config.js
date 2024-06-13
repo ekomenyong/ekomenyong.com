@@ -10,6 +10,20 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/insights/how-to-setup-free-postgresql-database-on-railway-app",
+        destination: "/insights",
+        permanent: true,
+      },
+      {
+        source: "/insights/redesign-next-js-13-blog-contentlayer-typescript",
+        destination: "/insights",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 module.exports = process.env.ANALYZE === "true" ? withBundleAnalyzer(nextConfig) : nextConfig;

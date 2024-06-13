@@ -37,12 +37,12 @@ const faqs = [
   {
     question: "What is SEO for Product-Led Growth (PLG)?",
     answer:
-      "In the context of PLG, where the product itself is the primary means of acquisition, engagement, and expansion, SEO plays a crucial role in attracting potential users to the product through search engines. SEO supports PLG with strategies for product discovery, accessibility, enhancing user experience, leveraging user feedback, and more",
+      "In the context of PLG, where the product itself is the primary means of acquisition, engagement, and expansion, SEO plays a crucial role in attracting potential users to the product through search engines and other organic channels. SEO supports PLG with strategies for product discovery, accessibility, enhancing user experience, leveraging user feedback, and more.",
   },
   {
     question: "What makes your approach to SEO different from others?",
     answer:
-      'With the advancements of search engines, modern SEO is more than optimizing titles, meta descriptions and targeting keywords. There is no "cookie-cutter" approach to doing SEO. Every project or engagement starts fresh. I like to talk to stakeholders, users and use historical data to help formulate a strategy based on your users.',
+      'With the advancements of search engines and AI, modern SEO is more than optimizing titles, meta descriptions and targeting keywords. There is no "cookie-cutter" approach to doing SEO. Every project or engagement starts fresh. I like to talk to stakeholders, users, and use historical data to help formulate a strategy based on your users.',
   },
   {
     question: "What is your pricing structure?",
@@ -52,20 +52,16 @@ const faqs = [
   {
     question: 'What does an SEO "project" look like?',
     answer:
-      "Sometimes startups and tech companies want me to consult on creating their SEO strategy from the ground up or hiring their first SEO. Other times, a company will need assistance for something complex like a website migration. In cases like these, I consult for just the period of time to support the specific effort, or project.",
-  },
-  {
-    question: "What sort of services do you offer for monthly retainers?",
-    answer: "It depends on the client, but most times I help ",
+      "Sometimes startups or tech companies want me to consult on creating their SEO strategy from the ground up or hiring their first SEO. Other times, a company will need assistance for something complex like a website migration. In cases like these, I consult for just the period of time to support the specific effort or project.",
   },
   {
     question: "Will you collaborate with other teams?",
     answer:
-      "I am more than happy to work alongside marketers, copywriters, engineers, product teams, or any other people necessary. I prefer to communicate asynchronously using email and tools like Slack for day-to-day conversations. For project management, I like to use tools like Asana, Clickup, Notion, or whichever tools you are currently using.",
+      "I am more than happy to work alongside marketers, copywriters, engineers, product teams, or any other people involved. I prefer to communicate asynchronously using email and tools like Slack for day-to-day conversations. For project management, I like to use tools like Asana, Clickup, Notion, or whatever tools you are currently using.",
   },
   {
     question: "Are available for a full-time role?",
     answer:
-      "I am currently happy in my full-time role but am always interested to hear how you think we can work together. If you'd like to hire me in a full-time capacity, let's hop on a call and talk about it.",
+      "I am always interested to hear how you think we can work together. If you'd like to hire me in a full-time capacity, let's hop on a call and talk about it.",
   },
 ];

@@ -5,7 +5,7 @@ export const baseUrl = "https://ekomenyong.com";
 export default async function sitemap() {
   let blogs = getBlogPosts().map((post) => ({
     url: `${baseUrl}/insights/${post.slug}`,
-    lastModified: post.metadata.publishedAt,
+    lastModified: post.metadata.updatedAt,
   }));
 
   let routes = ["", "/insights"].map((route) => ({

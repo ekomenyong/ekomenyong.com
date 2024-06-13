@@ -79,6 +79,7 @@
 
   a {
     @apply cursor-pointer;
+    transition: color 0.3s;
   }
 
   pre::-webkit-scrollbar {
@@ -131,11 +132,11 @@
   }
 
   .prose pre {
-    @apply overflow-x-auto rounded-lg border border-neutral-200 bg-neutral-50 px-3 py-2 text-sm dark:border-neutral-900 dark:bg-neutral-900;
+    @apply overflow-x-auto rounded-lg border border-neutral-200 bg-white px-3 py-2 text-sm dark:border-neutral-900 dark:bg-neutral-900;
   }
 
   .prose code {
-    @apply rounded-lg px-1 py-0.5;
+    @apply rounded-lg px-1 py-0.5 !text-foreground before:content-[''] after:content-[''];
   }
 
   .prose pre code {
@@ -154,7 +155,7 @@
   }
 
   .prose p {
-    @apply my-4 text-black dark:text-neutral-200;
+    @apply my-4 text-foreground dark:text-neutral-200;
   }
 
   .prose h1 {
@@ -183,6 +184,24 @@
 
   .prose ol {
     @apply list-decimal pl-6;
+  }
+  .prose ol li::marker {
+    @apply text-foreground;
+  }
+
+  .prose ul li::marker {
+    @apply text-brand;
+  }
+
+  .prose li {
+    @apply text-foreground;
+  }
+  .prose strong {
+    font-weight: 600;
+  }
+
+  .prose .callout > p {
+    margin: 0 !important;
   }
 
   .prose > :first-child {

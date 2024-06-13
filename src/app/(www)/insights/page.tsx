@@ -4,10 +4,10 @@ import { formatDate, getBlogPosts, readingTime } from "~/app/(www)/insights/util
 import { Heading, HeadingEyebrow } from "~/components/atoms/heading";
 import PostCard from "~/components/blocks/post-card";
 import Container from "~/components/global/container";
-import BlogSearch from "~/components/pages/blog/blog-search";
 
 export default function BlogIndexPage() {
-  let allBlogs = getBlogPosts();
+  const allBlogs = getBlogPosts();
+
   return (
     <Container as="section" fullWidth>
       <Container>
@@ -15,10 +15,13 @@ export default function BlogIndexPage() {
           <div className="w-full md:sticky md:top-32 md:mb-0 md:w-[240px]">
             <HeadingEyebrow>Insights</HeadingEyebrow>
             <Heading level={1}>My Latest Musings</Heading>
-            <div className="mt-8">
+            {/* <div className="mt-8">
               <BlogSearch />
-            </div>
-            {/* TODO: Add blog category filter */}
+            </div> */}
+            <p className="text-sm">
+              Sometimes I write about things. When I do write about things, I write about SEO, digital
+              marketing, web design, user experience, development, and stuff.
+            </p>
           </div>
           <div className="mt-8 flex w-full flex-col items-end gap-y-8 sm:w-[500px] md:mt-0 lg:w-[580px]">
             {allBlogs
@@ -28,7 +31,6 @@ export default function BlogIndexPage() {
                 }
                 return 1;
               })
-              .slice(0, 5)
               .map((post) => (
                 <PostCard
                   key={post.slug}

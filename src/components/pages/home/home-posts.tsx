@@ -24,7 +24,7 @@ const HomePosts = () => {
                 }
                 return 1;
               })
-              .slice(0, 5)
+              .slice(0, 3)
               .map((post) => (
                 <PostCard
                   key={post.slug}

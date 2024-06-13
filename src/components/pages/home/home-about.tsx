@@ -39,9 +39,8 @@ const HomeAbout = () => {
             </p>
             <p className="mb-12 mt-4 text-xl">
               I pride myself on delivering high-quality content that will convert your web visitors into happy
-              users, clients, or customers. I&apos;m focused on more than quick wins &mdash; I&apos;m like
-              creating scalable and effective strategies that will continue to drive organic growth over the
-              long-term.
+              users, clients, or customers. I&apos;m focused on more than quick wins &mdash; I like creating
+              scalable and effective strategies that will continue to drive organic growth over the long-term.
             </p>
             <Link
               href="https://read.cv/ekomenyong"

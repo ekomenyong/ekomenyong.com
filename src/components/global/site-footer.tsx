@@ -31,7 +31,7 @@ const SiteFooter = () => {
             <p>
               Site design and development by:{" "}
               <Link
-                href="https://github.com/ekomenyong"
+                href="https://github.com/ekomenyong/ekomenyong.com"
                 className="font-medium underline underline-offset-2 hover:text-brand">
                 Ekom Enyong
               </Link>

@@ -27,6 +27,7 @@ const HomeAbout = () => {
               width={500}
               alt="Headshot of Ekom Enyong"
               className="mb-8 h-auto max-w-[280px] rounded-lg border-black object-cover shadow-lg md:mb-0"
+              priority
             />
           </div>
           <div>

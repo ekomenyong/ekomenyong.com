@@ -6,7 +6,7 @@ import { z } from "zod";
 import { ContactEmailTemplate } from "~/components/global/contact-email";
 
 export async function POST(req: NextRequest) {
-  const resend = new Resend(process.env.RESEND_API_KEY);
+  const resend = new Resend(`${process.env.RESEND_API_KEY}`);
 
   const sendRouteSchema = z.object({
     fullName: z.string().min(1),

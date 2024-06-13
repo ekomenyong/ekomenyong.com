@@ -2,14 +2,6 @@
 const withBundleAnalyzer = require("@next/bundle-analyzer")();
 const nextConfig = {
   reactStrictMode: true,
-  images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "cdn.sanity.io",
-      },
-    ],
-  },
   async redirects() {
     return [
       {
@@ -20,6 +12,11 @@ const nextConfig = {
       {
         source: "/insights/redesign-next-js-13-blog-contentlayer-typescript",
         destination: "/insights",
+        permanent: true,
+      },
+      {
+        source: "/info",
+        destination: "/#info",
         permanent: true,
       },
     ];

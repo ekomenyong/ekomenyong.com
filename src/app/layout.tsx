@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import PlausibleProvider from "next-plausible";
 
 import TailwindIndicator from "~/components/global/tailwind-indicator";
@@ -45,6 +46,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <main className="flex-1">{children}</main>
         </div>
         <TailwindIndicator />
+        <SpeedInsights />
       </body>
     </html>
   );

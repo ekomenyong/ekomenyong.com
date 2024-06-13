@@ -32,9 +32,6 @@ export function ContactForm() {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     await fetch("/api/send", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
       body: JSON.stringify({
         fullName: values.fullName,
         email: values.email,

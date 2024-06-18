@@ -16,6 +16,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/posts/how-to-setup-free-postgresql-database-on-railway-app",
+        destination: "/insights",
+        permanent: true,
+      },
+      {
         source: "/info",
         destination: "/#info",
         permanent: true,

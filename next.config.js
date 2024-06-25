@@ -46,7 +46,7 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "posts/from-wordpress-to-jamstack-why-self-taught-devloper-switched",
+        source: "/posts/from-wordpress-to-jamstack-why-self-taught-devloper-switched",
         destination: "/insights",
         permanent: true,
       },

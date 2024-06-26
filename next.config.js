@@ -60,6 +60,11 @@ const nextConfig = {
         destination: "/insights",
         permanent: true,
       },
+      {
+        source: "/insights/2seo-mindset-evolution",
+        destination: "/insights/seo-mindset-evolution",
+        permanent: true,
+      },
     ];
   },
   async rewrites() {

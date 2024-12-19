@@ -10,7 +10,7 @@ export default async function Home() {
       <HomeHero
         badge
         badgeHref="/contact"
-        badgeMessage="Limited Availability Q3/24"
+        badgeMessage="Limited Availability Q2/25"
         cta
         ctaHref="/contact"
         ctaText="Let's connect"
